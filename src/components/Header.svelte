@@ -1,9 +1,11 @@
 <script>
   import Container from "./Container.svelte";
   import Logo from "./Logo.svelte";
+
+  let scrollY = 0;
 </script>
 
-<header>
+<header class={scrollY > 0 ? "scrolled" : undefined}>
   <Container fillViewport class="header__container">
     <nav>
       <a href="/" class="header__logo-wrapper" aria-label="Home">
@@ -24,6 +26,7 @@
     </nav>
   </Container>
 </header>
+<svelte:window bind:scrollY />
 
 <style lang="scss">
   header {
@@ -34,6 +37,10 @@
     background-color: var(--primary-background-color);
     z-index: 1000;
     /* background: linear-gradient( var(--primary-background-color) 90%, transparent 100%); */
+
+    &.scrolled {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
   }
 
   .header {
