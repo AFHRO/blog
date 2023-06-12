@@ -17,6 +17,8 @@
     --primary-color: #0498b4;
     --primary-background-color: #f5f5f5;
     --text-black: #191a1c;
+    --text-grey: #252526;
+    --secondary-background-color: #f2f2f2;
   }
   .main-wrapper {
     padding-top: 100px;

@@ -18,8 +18,6 @@
 
 {#if loading}
   <p>Loading...</p>
-{:else if !posts?.length}
-  {null}
 {/if}
 
 <Pagination {currentPage} />
