@@ -14,12 +14,6 @@
 
       <ul>
         <li>
-          <a href="/" aria-label="Home">Home</a>
-        </li>
-        <li>
-          <a href="/" aria-label="Posts">Posts</a>
-        </li>
-        <li>
           <a href="/" aria-label="Blog">Blog</a>
         </li>
       </ul>

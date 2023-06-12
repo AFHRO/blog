@@ -53,7 +53,6 @@
     gap: 16px;
     display: flex;
     flex-direction: column;
-    /* max-width: clamp(300px, 100%, 1200px) !important; */
 
     @media screen and (min-width: 768px) {
       gap: 40px;
@@ -68,7 +67,7 @@
   }
 
   .post-hero {
-    background: rgb(16, 24, 29);
+    background: var(--secondary-background-color);
     display: flex;
     margin-top: -200px;
     padding-top: 200px;
@@ -87,7 +86,7 @@
         height: 220px;
         object-fit: cover;
         border-radius: 17px;
-        border: 2px solid rgb(80, 174, 235);
+        border: 2px solid var(--text-grey);
         @media (min-width: 576px) {
           height: 440px;
         }
@@ -99,7 +98,7 @@
 
       &__category {
         font-size: 1.6rem;
-        color: rgb(80, 174, 235);
+        color: var(--text-grey);
         margin-bottom: 8px;
       }
 
@@ -115,12 +114,12 @@
       &__author,
       &__date,
       &__length {
-        color: rgb(100, 116, 139);
+        color: var(--text-grey);
       }
       &__date,
       &__length {
         font-size: 1.6rem;
-        color: rgb(100, 116, 139);
+        color: var(--text-grey);
         margin-bottom: 8px;
 
         @media screen and (min-width: 768px) {
