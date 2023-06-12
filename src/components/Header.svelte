@@ -1,9 +1,11 @@
 <script>
   import Container from "./Container.svelte";
   import Logo from "./Logo.svelte";
+
+  let scrollY = 0;
 </script>
 
-<header>
+<header class={scrollY > 0 ? "scrolled" : undefined}>
   <Container fillViewport class="header__container">
     <nav>
       <a href="/" class="header__logo-wrapper" aria-label="Home">
@@ -12,18 +14,13 @@
 
       <ul>
         <li>
-          <a href="/" aria-label="Home">Home</a>
-        </li>
-        <li>
-          <a href="/" aria-label="Posts">Posts</a>
-        </li>
-        <li>
           <a href="/" aria-label="Blog">Blog</a>
         </li>
       </ul>
     </nav>
   </Container>
 </header>
+<svelte:window bind:scrollY />
 
 <style lang="scss">
   header {
@@ -34,6 +31,10 @@
     background-color: var(--primary-background-color);
     z-index: 1000;
     /* background: linear-gradient( var(--primary-background-color) 90%, transparent 100%); */
+
+    &.scrolled {
+      box-shadow: var(--input-box-shadow);
+    }
   }
 
   .header {
@@ -77,13 +78,13 @@
       list-style: none;
 
       a {
-        color: var(--text-color);
+        color: var(--text-black);
         font-size: 18px;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          color: var(--text-color);
+          color: var(--text-black);
           text-decoration: underline;
         }
       }

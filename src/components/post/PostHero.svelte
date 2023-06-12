@@ -19,9 +19,9 @@
       <img src={post.featured_media} alt={post.title} loading="lazy" />
     </div>
     <div class="post-hero__content">
-      <p class="post-hero__content__category">
+      <!-- <p class="post-hero__content__category">
         {categories[categoryId]?.name}
-      </p>
+      </p> -->
       <h1>
         {@html post.title}
       </h1>
@@ -53,7 +53,6 @@
     gap: 16px;
     display: flex;
     flex-direction: column;
-    /* max-width: clamp(300px, 100%, 1200px) !important; */
 
     @media screen and (min-width: 768px) {
       gap: 40px;
@@ -87,7 +86,7 @@
         height: 220px;
         object-fit: cover;
         border-radius: 17px;
-        border: 2px solidvar(--text-grey);
+        border: 2px solid var(--text-grey);
         @media (min-width: 576px) {
           height: 440px;
         }
@@ -115,12 +114,12 @@
       &__author,
       &__date,
       &__length {
-        color: rgb(100, 116, 139);
+        color: var(--text-grey);
       }
       &__date,
       &__length {
         font-size: 1.6rem;
-        color: rgb(100, 116, 139);
+        color: var(--text-grey);
         margin-bottom: 8px;
 
         @media screen and (min-width: 768px) {

@@ -10,8 +10,7 @@
     border: none;
     border-radius: 16px;
     font-size: 16px;
-    /* background-color: rgb(40, 60, 73); */
     color: rgb(207, 213, 221);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--input-box-shadow);
   }
 </style>
