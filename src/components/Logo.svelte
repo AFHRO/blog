@@ -1,1 +1,5 @@
-<h1>A.H.R.O</h1>
+<script>
+  import logo from "$lib/LogoWithText.svg";
+</script>
+
+<img src={logo} alt="AHRO" width="300" />
