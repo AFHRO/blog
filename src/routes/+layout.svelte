@@ -41,7 +41,7 @@
   }
   :global(body) {
     line-height: 1.5;
-    color: var(--text-color);
+    color: var(--text-black);
     background-color: var(--primary-background-color);
   }
 

@@ -1,11 +1,79 @@
 <script>
   import Container from "./Container.svelte";
   import Space from "./Space.svelte";
+
+  const linksArray = [
+    {
+      title: "A.H.R.O",
+      links: [
+        {
+          title: "Our People",
+          url: "/",
+        },
+        {
+          title: "FAQs",
+          url: "/",
+        },
+        {
+          title: "Feedback and Appeals",
+          url: "/",
+        },
+      ],
+    },
+    {
+      title: "Services",
+      links: [
+        {
+          title: "Scientific Publishing",
+          url: "/",
+        },
+        {
+          title: "Conferences",
+          url: "/",
+        },
+        {
+          title: "Clinical Research",
+          url: "/",
+        },
+      ],
+    },
+    {
+      title: "Contact",
+      links: [
+        {
+          title: "info@afhro.org",
+          url: "mailto:info@afhro.org",
+        },
+        {
+          title: "+447503568624",
+          url: "tel:+447503568624",
+        },
+        {
+          title:
+            "The Pentagon Centre <br/> 38 Washington Street <br/>Glasgow<br/>G3 8AZ <br/>",
+          url: "/",
+        },
+      ],
+    },
+  ];
 </script>
 
-<Container fillViewport class="footer__container">
-  <div class="footer__content">AFRICA HEALTH RESEARCH ORGANISATION</div>
-</Container>
+<footer class="footer">
+  <Container class="footer__container">
+    <div class="sections-list">
+      {#each linksArray as linkObject}
+        <section class="footer__section">
+          <h5>{linkObject.title}</h5>
+          <Space direction="column">
+            {#each linkObject.links as link}
+              <a href={link.url}>{@html link.title}</a>
+            {/each}
+          </Space>
+        </section>
+      {/each}
+    </div>
+  </Container>
+</footer>
 
 <style lang="scss">
   :global(.footer__container) {
@@ -14,64 +82,28 @@
   }
 
   .footer {
-    &__content {
+    margin-top: 10rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .sections-list {
       display: flex;
+      width: 100%;
+      gap: 4rem;
       flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      &__subscribe {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-
-        @media (min-width: 768px) {
-          flex-direction: row;
-
-          p {
-            width: 21rem;
-            font-size: 1.4rem;
-          }
-        }
-      }
-      p {
-        color: rgb(133, 147, 167);
-      }
-
-      @media (min-width: 768px) {
+      @media screen and (min-width: 768px) {
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10vw;
       }
+      margin: 0 auto;
     }
-
-    &__content__form {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      justify-content: center;
-
-      input {
-        padding: 8px 28px 8px 10px;
-        border: none;
-        border-radius: 10px;
-        outline: none;
-        font-size: 14px;
-        background-color: rgb(31, 48, 58);
-        color: rgb(133, 147, 167);
+    &__section {
+      h5 {
+        margin-bottom: 2rem;
+        color: var(--text-grey);
       }
-
-      button {
-        display: inline-flex;
-        padding: 6px 20px;
-        margin-left: -40px;
-        border: none;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 500;
-        color: rgb(191, 232, 233);
-        transition: background-color 200ms ease 0s, color 200ms ease 0s;
-        background-color: rgb(43, 125, 125);
+      a {
+        width: 100%;
       }
     }
   }

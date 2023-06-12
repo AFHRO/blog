@@ -78,13 +78,13 @@
       list-style: none;
 
       a {
-        color: var(--text-color);
+        color: var(--text-black);
         font-size: 18px;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          color: var(--text-color);
+          color: var(--text-black);
           text-decoration: underline;
         }
       }
