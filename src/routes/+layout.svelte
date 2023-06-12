@@ -19,6 +19,7 @@
     --text-black: #191a1c;
     --text-grey: #252526;
     --secondary-background-color: #f2f2f2;
+    --input-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
   .main-wrapper {
     padding-top: 100px;
