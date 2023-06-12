@@ -33,7 +33,7 @@
     /* background: linear-gradient( var(--primary-background-color) 90%, transparent 100%); */
 
     &.scrolled {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--input-box-shadow);
     }
   }
 

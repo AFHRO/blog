@@ -74,8 +74,7 @@
       flex-direction: column;
       box-sizing: border-box;
       height: 100%;
-      /* background-color: rgb(16, 24, 29); */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--input-box-shadow);
       cursor: pointer;
       gap: 12px;
       padding: 8px;

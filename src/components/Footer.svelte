@@ -4,16 +4,7 @@
 </script>
 
 <Container fillViewport class="footer__container">
-  <div class="footer__content">
-    <div class="footer__content__subscribe">
-      <p>Get notified about latest travel updates & new city guides</p>
-
-      <div class="footer__content__form">
-        <input type="text" placeholder="Enter your email" />
-        <button>Subscribe</button>
-      </div>
-    </div>
-  </div>
+  <div class="footer__content">AFRICA HEALTH RESEARCH ORGANISATION</div>
 </Container>
 
 <style lang="scss">
