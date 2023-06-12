@@ -18,9 +18,11 @@
 
 {#if loading}
   <p>Loading...</p>
+{:else if !posts.length}
+  null
+{:else}
+  <Pagination {currentPage} />
 {/if}
-
-<Pagination {currentPage} />
 
 <style>
   section {
