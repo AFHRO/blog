@@ -20,9 +20,13 @@
     --text-grey: #252526;
     --secondary-background-color: #f2f2f2;
     --input-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    --input-border-grey: #d4d4d4;
   }
   .main-wrapper {
     padding-top: 100px;
+    @media (min-width: 768px) {
+      min-height: calc(100vh - 600px);
+    }
   }
 
   :global(body),

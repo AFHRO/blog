@@ -66,7 +66,7 @@
 <footer class="footer">
   <Container class="footer__container">
     <div class="sections-list">
-      <img src={logo} alt="AHRO" width="150" class="footer__logo" />
+      <img src={logo} alt="AHRO" width="100" class="footer__logo" />
 
       {#each linksArray as linkObject}
         <section class="footer__section">
@@ -78,6 +78,21 @@
           </Space>
         </section>
       {/each}
+    </div>
+    <div class="footer__bottom">
+      <div>
+        <span class="footer__copyright"
+          >{@html "&copy"} {new Date().getFullYear()} AHRO</span
+        >
+        <a href="/">Privacy Policy</a>
+        <a href="/">Terms and Conditions</a>
+        <a href="/">Cookie Policy</a>
+      </div>
+      <div>
+        <a href="/"> Facebook </a>
+        <a href="/"> Twitter </a>
+        <a href="/"> Instagram </a>
+      </div>
     </div>
   </Container>
 </footer>
@@ -95,18 +110,22 @@
 
     &__logo {
       align-self: flex-start;
+
+      @media screen and (min-width: 768px) {
+        width: clamp(10rem, 10vw, 20rem);
+      }
     }
     .sections-list {
       display: flex;
-
       width: 100%;
       gap: 4rem;
       flex-direction: column;
+      border-bottom: 1px solid var(--input-border-grey);
+      padding-bottom: 4rem;
       @media screen and (min-width: 768px) {
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
-        gap: clamp(5rem, 10vw, 10rem);
+        gap: clamp(5rem, 3vw, 10rem);
       }
       margin: 0 auto;
     }
@@ -118,7 +137,47 @@
       }
       a {
         width: 100%;
+        &:hover {
+          color: var(--primary-color);
+          text-decoration: underline;
+        }
       }
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4rem;
+      flex-direction: column;
+      gap: 3rem;
+
+      @media screen and (min-width: 1024px) {
+        flex-direction: row-reverse;
+        gap: 3rem;
+      }
+
+      a {
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+      }
+      @media screen and (min-width: 768px) {
+        & > * {
+          flex-direction: row;
+        }
+      }
+    }
+    &__copyright {
+      color: var(--text-grey);
+      font-size: 1.6rem;
     }
   }
 </style>
