@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "@fontsource-variable/nunito";
   import Header from "../components/Header.svelte";
   import { fade } from "svelte/transition";
