@@ -96,11 +96,11 @@
     &__content {
       flex: 2 1 0%;
 
-      &__category {
+      /* &__category {
         font-size: 1.6rem;
         color: var(--text-grey);
         margin-bottom: 8px;
-      }
+      } */
 
       h1 {
         font-size: 3.2rem;
