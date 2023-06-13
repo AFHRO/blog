@@ -4,7 +4,7 @@
 
   const linksArray = [
     {
-      title: "A.H.R.O",
+      title: "About",
       links: [
         {
           title: "Our People",
@@ -33,6 +33,23 @@
         },
         {
           title: "Clinical Research",
+          url: "/",
+        },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        {
+          title: "Publications",
+          url: "/",
+        },
+        {
+          title: "Research",
+          url: "/",
+        },
+        {
+          title: "Blog",
           url: "/",
         },
       ],
