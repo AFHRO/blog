@@ -1,6 +1,7 @@
 <script>
   import Container from "./Container.svelte";
   import Space from "./Space.svelte";
+  import logo from "$lib/Logo With Text Under.svg";
 
   const linksArray = [
     {
@@ -13,6 +14,10 @@
         {
           title: "FAQs",
           url: "/",
+        },
+        {
+          title: "Blog",
+          url: "/blog",
         },
         {
           title: "Feedback and Appeals",
@@ -33,23 +38,6 @@
         },
         {
           title: "Clinical Research",
-          url: "/",
-        },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        {
-          title: "Publications",
-          url: "/",
-        },
-        {
-          title: "Research",
-          url: "/",
-        },
-        {
-          title: "Blog",
           url: "/",
         },
       ],
@@ -78,6 +66,8 @@
 <footer class="footer">
   <Container class="footer__container">
     <div class="sections-list">
+      <img src={logo} alt="AHRO" width="150" class="footer__logo" />
+
       {#each linksArray as linkObject}
         <section class="footer__section">
           <h5>{linkObject.title}</h5>
@@ -102,15 +92,21 @@
     margin-top: 10rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
+
+    &__logo {
+      align-self: flex-start;
+    }
     .sections-list {
       display: flex;
+
       width: 100%;
       gap: 4rem;
       flex-direction: column;
       @media screen and (min-width: 768px) {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 10vw;
+        justify-content: space-between;
+        gap: clamp(5rem, 10vw, 10rem);
       }
       margin: 0 auto;
     }
@@ -118,6 +114,7 @@
       h5 {
         margin-bottom: 2rem;
         color: var(--text-grey);
+        text-transform: uppercase;
       }
       a {
         width: 100%;
