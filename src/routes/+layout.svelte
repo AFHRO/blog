@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "@fontsource-variable/nunito";
+  import "@fontsource-variable/mulish";
   import Header from "../components/Header.svelte";
   import { fade } from "svelte/transition";
   import Footer from "../components/Footer.svelte";
@@ -64,7 +64,7 @@
   /* inputs */
   :global(input) {
     font-family: inherit;
-    font-family: "Nunito Variable", sans-serif;
+    font-family: "Mulish Variable", sans-serif;
     letter-spacing: 3;
     font-size: inherit;
     line-height: inherit;
