@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "@fontsource-variable/nunito";
   import Header from "../components/Header.svelte";
   import { fade } from "svelte/transition";
@@ -20,9 +20,13 @@
     --text-grey: #252526;
     --secondary-background-color: #f2f2f2;
     --input-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    --input-border-grey: #d4d4d4;
   }
   .main-wrapper {
     padding-top: 100px;
+    @media (min-width: 768px) {
+      min-height: calc(100vh - 600px);
+    }
   }
 
   :global(body),
@@ -33,7 +37,8 @@
 
   :global(html) {
     font-size: 62.5%;
-    font-family: "Nunito Variable", Geneva, Tahoma, sans-serif;
+    font-family: "Mulish Variable", Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
 
     @media (max-width: 768px) {
       font-size: 50%;

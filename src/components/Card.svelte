@@ -29,7 +29,7 @@
 
 <a
   class="post-card"
-  href={`/post/${post.slug}`}
+  href={`/blog/post/${post.slug}`}
   in:fade={{ delay: (index + 1) * 300 }}
   aria-label={post.title}
 >
