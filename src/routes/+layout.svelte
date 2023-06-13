@@ -33,7 +33,8 @@
 
   :global(html) {
     font-size: 62.5%;
-    font-family: "Nunito Variable", Geneva, Tahoma, sans-serif;
+    font-family: "Mulish Variable", Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
 
     @media (max-width: 768px) {
       font-size: 50%;
