@@ -8,7 +8,7 @@
   export let currentPage: number | string = 1;
 
   const getUrl = (currentPage: number) => {
-    return `/page/${currentPage}`;
+    return `/blog/page/${currentPage}`;
   };
 
   afterNavigate(() => {
