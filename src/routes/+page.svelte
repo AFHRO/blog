@@ -1,1 +1,5 @@
-<div>Welcome</div>
+<script>
+  import Container from "../components/Container.svelte";
+</script>
+
+<Container>Welcome</Container>
