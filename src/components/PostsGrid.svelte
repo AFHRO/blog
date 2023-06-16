@@ -2,6 +2,7 @@
   import type { Post } from "../types/posts";
   import Card from "./Card.svelte";
   import Pagination from "./Pagination.svelte";
+  import PostsLoading from "./PostsLoading.svelte";
 
   export let posts: Post[] = [];
   export let loading = false;
@@ -17,7 +18,7 @@
 </section>
 
 {#if loading}
-  <p>Loading...</p>
+  <PostsLoading />
 {:else if !posts.length}
   null
 {:else}

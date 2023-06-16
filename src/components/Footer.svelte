@@ -177,7 +177,7 @@
     }
     &__copyright {
       color: var(--text-grey);
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 </style>
