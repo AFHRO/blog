@@ -35,7 +35,7 @@
   </form>
   <div class="container__heading">
     <h1>
-      {#if searchTextValue}
+      {#if searchTextInUrl}
         Search results for "{searchTextInUrl}"
       {/if}
     </h1>
