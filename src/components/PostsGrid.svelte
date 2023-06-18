@@ -21,7 +21,9 @@
       <Card {post} {index} />
     {/each}
   </section>
-  <Pagination {currentPage} />
+  {#if posts.length >= 9}
+    <Pagination {currentPage} />
+  {/if}
 {/if}
 
 <style>
