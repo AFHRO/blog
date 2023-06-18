@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { fade } from "svelte/transition";
   import Container from "../Container.svelte";
 
   export let content: string;
