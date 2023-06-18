@@ -148,11 +148,11 @@
       display: flex;
       justify-content: space-between;
       margin-top: 4rem;
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 3rem;
 
       @media screen and (min-width: 1024px) {
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 3rem;
       }
 
