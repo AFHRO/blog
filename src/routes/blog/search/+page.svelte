@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Post } from "types/posts";
+  import type { Post } from "src/types/posts";
   import { afterNavigate } from "$app/navigation";
   import { page } from "$app/stores";
   import searchPosts from "../../../utils/searchPosts";
