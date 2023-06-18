@@ -2,6 +2,7 @@
   import type { Post } from "../types/posts";
   import Card from "./Card.svelte";
   import Pagination from "./Pagination.svelte";
+  import PostsLoading from "./PostsLoading.svelte";
 
   export let posts: Post[] = [];
   export let loading = false;
@@ -10,18 +11,19 @@
 
 <title>Blog</title>
 
-<section>
-  {#each posts as post, index}
-    <Card {post} {index} />
-  {/each}
-</section>
-
 {#if loading}
-  <p>Loading...</p>
+  <PostsLoading />
 {:else if !posts.length}
-  null
+  <div />
 {:else}
-  <Pagination {currentPage} />
+  <section>
+    {#each posts as post, index}
+      <Card {post} {index} />
+    {/each}
+  </section>
+  {#if posts.length >= 9}
+    <Pagination {currentPage} />
+  {/if}
 {/if}
 
 <style>

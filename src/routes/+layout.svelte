@@ -20,6 +20,7 @@
     --text-grey: #252526;
     --secondary-background-color: #f2f2f2;
     --input-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    --skeleton-background-grey: #e0e0e0;
     --input-border-grey: #d4d4d4;
   }
   .main-wrapper {
@@ -133,22 +134,22 @@
   }
 
   :global(h6) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   :global(p) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   :global(a) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   :global(input) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   :global(button) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 </style>

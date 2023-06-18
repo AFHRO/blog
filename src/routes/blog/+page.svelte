@@ -5,10 +5,11 @@
   import fetchPosts from "../../utils/fetchPosts";
 
   let posts: Post[] = [];
-  let loading = true;
+  let loading = false;
 
   onMount(async () => {
     posts = [];
+    loading = true;
     posts = await fetchPosts();
     loading = false;
   });

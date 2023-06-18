@@ -1,4 +1,4 @@
-<input {...$$props} />
+<input {...$$props} bind:value={$$props.value} />
 
 <!-- Path: src/components/Counter.svelte -->
 <style>

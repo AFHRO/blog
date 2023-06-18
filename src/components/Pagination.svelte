@@ -1,19 +1,37 @@
 <script lang="ts">
   import { afterNavigate } from "$app/navigation";
+  import { page } from "$app/stores";
 
   import ChevronLeft from "./icons/ChevronLeft.svelte";
   import ChevronRight from "./icons/ChevronRight.svelte";
   let currentPageVal: string | number | null = "1";
 
   export let currentPage: number | string = 1;
-
+  const searchText = $page.url.searchParams.get("search");
   const getUrl = (currentPage: number) => {
+    if (searchText)
+      return `/blog/search?search=${searchText}&page=${currentPage}`;
     return `/blog/page/${currentPage}`;
   };
+
+  $: currentPageVal = searchText
+    ? $page.url.searchParams.get("page") || "1"
+    : currentPage;
 
   afterNavigate(() => {
     currentPageVal = currentPage;
   });
+
+  let numbers = [1, 2, 3, 4, 5];
+  if (Number(currentPageVal) > 3) {
+    numbers = [
+      Number(currentPageVal) - 2,
+      Number(currentPageVal) - 1,
+      Number(currentPageVal),
+      Number(currentPageVal) + 1,
+      Number(currentPageVal) + 2,
+    ];
+  }
 </script>
 
 <div>
@@ -28,7 +46,7 @@
       </button>
     </a>
   {/if}
-  {#each [1, 2, 3, 4, 5] as page}
+  {#each numbers as page}
     <a
       class={page === Number(currentPageVal) ? "active" : ""}
       href={getUrl(page)}

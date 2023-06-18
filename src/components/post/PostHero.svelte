@@ -97,7 +97,7 @@
       flex: 2 1 0%;
 
       /* &__category {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: var(--text-grey);
         margin-bottom: 8px;
       } */
@@ -118,7 +118,7 @@
       }
       &__date,
       &__length {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: var(--text-grey);
         margin-bottom: 8px;
 

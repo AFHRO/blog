@@ -148,11 +148,11 @@
       display: flex;
       justify-content: space-between;
       margin-top: 4rem;
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 3rem;
 
       @media screen and (min-width: 1024px) {
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 3rem;
       }
 
@@ -177,7 +177,7 @@
     }
     &__copyright {
       color: var(--text-grey);
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 </style>

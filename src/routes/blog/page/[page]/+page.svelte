@@ -7,10 +7,11 @@
   export let data: any;
 
   let posts: Post[] = [];
-  let loading = true;
+  let loading = false;
 
   afterNavigate(async () => {
     posts = [];
+    loading = true;
     posts = await fetchPosts(data.page);
     loading = false;
   });
