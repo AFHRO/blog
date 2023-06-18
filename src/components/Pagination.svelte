@@ -14,6 +14,10 @@
     return `/blog/page/${currentPage}`;
   };
 
+  $: currentPageVal = searchText
+    ? $page.url.searchParams.get("page") || "1"
+    : currentPage;
+
   afterNavigate(() => {
     currentPageVal = currentPage;
   });
