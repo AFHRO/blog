@@ -11,17 +11,16 @@
 
 <title>Blog</title>
 
-<section>
-  {#each posts as post, index}
-    <Card {post} {index} />
-  {/each}
-</section>
-
 {#if loading}
   <PostsLoading />
 {:else if !posts.length}
   null
 {:else}
+  <section>
+    {#each posts as post, index}
+      <Card {post} {index} />
+    {/each}
+  </section>
   <Pagination {currentPage} />
 {/if}
 
