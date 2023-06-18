@@ -1,13 +1,16 @@
 <script lang="ts">
   import { afterNavigate } from "$app/navigation";
+  import { page } from "$app/stores";
 
   import ChevronLeft from "./icons/ChevronLeft.svelte";
   import ChevronRight from "./icons/ChevronRight.svelte";
   let currentPageVal: string | number | null = "1";
 
   export let currentPage: number | string = 1;
-
+  const searchText = $page.url.searchParams.get("search");
   const getUrl = (currentPage: number) => {
+    if (searchText)
+      return `/blog/search?search=${searchText}&page=${currentPage}`;
     return `/blog/page/${currentPage}`;
   };
 

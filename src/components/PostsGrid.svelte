@@ -14,7 +14,7 @@
 {#if loading}
   <PostsLoading />
 {:else if !posts.length}
-  null
+  <div />
 {:else}
   <section>
     {#each posts as post, index}

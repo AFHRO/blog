@@ -67,6 +67,10 @@
   .post-card {
     height: 100%;
     text-decoration: none;
+    max-width: 100%;
+    @media screen and (min-width: 768px) {
+      max-width: clamp(300px, 100%, 400px);
+    }
 
     &__content {
       position: relative;
