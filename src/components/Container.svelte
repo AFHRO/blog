@@ -1,43 +1,43 @@
 <script lang="ts">
-	// export let $$restProps: any = {};
-	export let fillViewport: boolean = false;
+  // export let $$restProps: any = {};
+  export let fillViewport: boolean = false;
 
-	const classes = () => {
-		const classList = [`container${$$props.class ? ' ' + $$props.class : ''}`];
+  const classes = () => {
+    const classList = [`container${$$props.class ? " " + $$props.class : ""}`];
 
-		if (fillViewport) {
-			classList.push('container--fill-viewport');
-		}
+    if (fillViewport) {
+      classList.push("container--fill-viewport");
+    }
 
-		return classList.join(' ');
-	};
+    return classList.join(" ");
+  };
 </script>
 
 <div {...$$props} class={classes()}>
-	<slot />
+  <slot />
 </div>
 
 <style lang="scss">
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 16px;
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
 
-		@media screen and (min-width: 768px) {
-			padding: 0 40px;
-		}
+    @media screen and (min-width: 768px) {
+      padding: 0 40px;
+    }
 
-		@media screen and (min-width: 992px) {
-			padding: 0 100px;
-		}
+    @media screen and (min-width: 992px) {
+      padding: 0 100px;
+    }
 
-		&--fill-viewport {
-			max-width: 100vw;
-			padding: 0 40px;
+    &--fill-viewport {
+      max-width: 100vw;
+      padding: 0 40px;
 
-			@media screen and (min-width: 768px) {
-				padding: 30px 50px;
-			}
-		}
-	}
+      @media screen and (min-width: 768px) {
+        padding: 30px 50px;
+      }
+    }
+  }
 </style>
