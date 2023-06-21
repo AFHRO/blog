@@ -88,7 +88,7 @@
                 </li>
               {/each}
               <li class="ml-24 first:ml-0 mt-1">
-                <a href={"/donation"}>
+                <a href={"/"}>
                   <Button
                     color={hasScrolledDown ? colors.secondary : undefined}
                     showLinkArrow
