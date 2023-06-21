@@ -1,16 +1,30 @@
 <script lang="ts">
   import "@fontsource-variable/mulish";
-  import Header from "../components/Header.svelte";
-  import { fade } from "svelte/transition";
-  import Footer from "../components/Footer.svelte";
+  import "../app.css";
+  import metaContent from "src/utils/metaContent";
+  //   import "../global.css";
 </script>
 
-<Header />
-<main class="main-wrapper" in:fade={{ delay: 0 }}>
-  <slot class="main" />
-</main>
-
-<Footer />
+<svelte:head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{metaContent.title}</title>
+  <meta name="description" content={metaContent.description} />
+  <!-- <meta name="keywords" content={metaContent.keywords} />
+    <meta name="author" content={metaContent.author} /> -->
+  <meta name="theme-color" content="#0498b4" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@sveltejs" />
+  <meta name="twitter:title" content={metaContent.title} />
+  <meta name="twitter:description" content={metaContent.description} />
+  <meta name="twitter:image" content={metaContent.image} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={metaContent.title} />
+  <meta property="og:description" content={metaContent.description} />
+  <meta property="og:image" content={metaContent.image} />
+  <meta property="og:url" content={metaContent.url} />
+</svelte:head>
+<slot class="main" />
 
 <style lang="scss">
   :global(:root) {
@@ -22,12 +36,6 @@
     --input-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     --skeleton-background-grey: #e0e0e0;
     --input-border-grey: #d4d4d4;
-  }
-  .main-wrapper {
-    padding-top: 100px;
-    @media (min-width: 768px) {
-      min-height: calc(100vh - 600px);
-    }
   }
 
   :global(body),
@@ -126,30 +134,36 @@
   }
 
   :global(h4) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   :global(h5) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(h6) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(p) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(a) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(input) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(button) {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  :global(.cols-container) {
+    display: flex;
+    /* flex-flow: row wrap; */
+    margin-left: calc(var(--inner-gutter) * -1);
   }
 </style>
