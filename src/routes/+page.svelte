@@ -9,7 +9,7 @@
 </script>
 
 <HeroSection />
-<main class="bg-white">
+<main class="bg-white py-[5rem]">
   <RecentArticlesSection {recentPosts} />
 </main>
 <GlobalFooter />
