@@ -8,9 +8,8 @@
   import colors from "src/utils/colors";
 
   let navLinks = [
-    { text: "About", href: "#about" },
-    { text: "Services", href: "#services" },
-    { text: "Contact", href: "#contact" },
+    { text: "About", href: "/" },
+    { text: "Services", href: "/" },
   ];
 
   let scrollY: number | null = null;
