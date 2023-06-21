@@ -1,0 +1,54 @@
+<script>
+  import Container from "./Container.svelte";
+  import Space from "./Space.svelte";
+  import footerLinks, { footerSocialLinks } from "src/utils/footerLinks";
+  import LogoIconWhite from "./icons/LogoIconWhite.svelte";
+</script>
+
+<footer class="bg-primary text-white py-20 text-[1.5rem]">
+  <Container>
+    <div
+      class="sections-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-20 justify-between"
+    >
+      <div class="flex flex-col gap-y-10 align-middle">
+        <div class="space-y-4 max-w-[18rem]">
+          <LogoIconWhite />
+          <h3 class="text-[1.2rem]">AFRICA HEALTH RESEARCH ORGANISATION</h3>
+        </div>
+
+        <div class="flex space-x-10 text-xl">
+          {#each footerSocialLinks as { Icon, link }}
+            <a href={link} class="hover:scale-125 transition-transform">
+              <Icon />
+            </a>
+          {/each}
+        </div>
+        <span class="footer__copyright"
+          >{@html "&copy"} {new Date().getFullYear()} AHRO</span
+        >
+      </div>
+
+      {#each footerLinks as linkObject}
+        <section class="footer__section">
+          <h5 class="font-extrabold text-4xl mb-10">{linkObject.title}</h5>
+          <Space direction="column">
+            {#each linkObject.links as link}
+              <a
+                href={link.url}
+                class="block w-full hover:underline text-[1.5rem]"
+                >{@html link.title}</a
+              >
+            {/each}
+          </Space>
+        </section>
+      {/each}
+    </div>
+    <!-- <div
+      class="flex flex-col-reverse md:flex-row justify-between text-xl w-full"
+    >
+      <a href="/" class="text-[1.5rem]">Privacy Policy</a>
+      <a href="/" class="text-[1.5rem]">Terms and Conditions</a>
+      <a href="/" class="text-[1.5rem]">Cookie Policy</a>
+    </div> -->
+  </Container>
+</footer>
