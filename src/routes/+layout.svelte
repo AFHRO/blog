@@ -1,17 +1,10 @@
 <script lang="ts">
   import "@fontsource-variable/mulish";
-  import Footer from "src/components/Footer.svelte";
-
-  import Header from "src/components/Header.svelte";
-  import { fade } from "svelte/transition";
+  import "../app.css";
+  //   import "../global.css";
 </script>
 
-<Header />
-<main class="main-wrapper" in:fade={{ delay: 0 }}>
-  <slot class="main" />
-</main>
-
-<Footer />
+<slot class="main" />
 
 <style lang="scss">
   :global(:root) {
@@ -23,12 +16,6 @@
     --input-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     --skeleton-background-grey: #e0e0e0;
     --input-border-grey: #d4d4d4;
-  }
-  .main-wrapper {
-    padding-top: 100px;
-    @media (min-width: 768px) {
-      min-height: calc(100vh - 600px);
-    }
   }
 
   :global(body),
@@ -127,30 +114,36 @@
   }
 
   :global(h4) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   :global(h5) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(h6) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(p) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(a) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(input) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   :global(button) {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  :global(.cols-container) {
+    display: flex;
+    /* flex-flow: row wrap; */
+    margin-left: calc(var(--inner-gutter) * -1);
   }
 </style>
