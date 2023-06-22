@@ -12,7 +12,7 @@
     { text: "Services", href: "/" },
   ];
 
-  let scrollY: number | null = null;
+  export let scrollY: number | null = null;
 
   onMount(() => {
     const video: any = document.getElementById("background-video");
@@ -134,8 +134,6 @@
     >
   </div>
 </header>
-
-<svelte:window bind:scrollY />
 
 <style>
   .hero {
