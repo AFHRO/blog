@@ -73,7 +73,7 @@
         >
           <LogoSvg invertColor={!hasScrolledDown} />
         </a>
-        <div class="md:hidden lg:w-6-cols lg:block">
+        <div class="hidden md:visible lg:w-6-cols lg:block">
           <nav>
             <h2 class="sr-only">Main Navigation</h2>
             <ul class={"flex flex-row flex-wrap items-baseline"}>
@@ -144,7 +144,7 @@
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 5vmax, 6rem);
     line-height: 1.1;
   }
 
