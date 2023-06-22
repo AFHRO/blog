@@ -23,6 +23,13 @@
   <meta property="og:description" content={metaContent.description} />
   <meta property="og:image" content={metaContent.image} />
   <meta property="og:url" content={metaContent.url} />
+  <title>{metaContent.title}</title>
+  <meta name={"description"} content={metaContent.description} />
+  <meta name="twitter:title" content={metaContent.title} />
+  <meta name="twitter:description" content={metaContent.description} />
+  <meta property="og:title" content={metaContent.title} />
+  <meta property="og:description" content={metaContent.description} />
+  <link rel="icon" href="/favicon.ico" />
 </svelte:head>
 <slot class="main" />
 
