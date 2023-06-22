@@ -25,14 +25,17 @@
   });
 </script>
 
-<a href={`/blog/post/${post.slug}`} class="rounded-lg h-full">
+<a
+  href={`/blog/post/${post.slug}`}
+  class="rounded-lg h-full hover:scale-[1.02] transition-all"
+>
   <img
     class="h-[30rem] w-full object-cover rounded-t-lg border border-gray-200"
     src={post.featured_media}
     alt={post.title}
   />
   <div>
-    <h3 class="text-3xl font-semibold my-5 hover:underline">
+    <h3 class="text-3xl text-primary font-semibold my-5 hover:underline">
       {@html htmlCodeToSymbol(postTitle)}
     </h3>
 

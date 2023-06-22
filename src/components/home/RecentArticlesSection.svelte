@@ -12,7 +12,7 @@
       <div />
     {:else}
       <div class="mb-10 flex justify-between items-center">
-        <h1 class="text-[3rem] font-bold">Latest from us</h1>
+        <h2 class="text-[3rem] font-extrabold">Latest from us</h2>
         <a href="/blog" class="text-primary-500 hover:underline text-secondary"
           >Visit the blog</a
         >
