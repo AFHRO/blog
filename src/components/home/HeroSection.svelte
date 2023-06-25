@@ -6,13 +6,9 @@
   import Container from "src/components/Container.svelte";
   import Button from "src/components/Button.svelte";
   import colors from "src/utils/colors";
-
-  let navLinks = [
-    { text: "About", href: "/" },
-    { text: "Services", href: "/" },
-  ];
-
-  let scrollY: number | null = null;
+  import LogoIconSvg from "../icons/LogoIconSvg.svelte";
+  import navLinks from "src/utils/navLinks";
+  import MobileNav from "../MobileNav.svelte";
 
   onMount(() => {
     const video: any = document.getElementById("background-video");
@@ -22,18 +18,13 @@
     // scroll to top on page load
     window.scrollTo(0, 0);
   });
-
-  $: hasScrolledDown = Number(scrollY) > 80;
-
-  $: linksClasses = hasScrolledDown
-    ? " text-primary hover:text-primary"
-    : " text-white hover:text-primary";
-
-  $: ctaBorderClasses = hasScrolledDown ? " border-primary" : " border-white";
 </script>
 
-<header class="hero ui-hero theme-dark-gray">
-  <div class="theme-light-gray relative h-full w-full">
+<header class="hero ui-hero">
+  <!-- 
+    nav bar removed from here
+   -->
+  <div class="bg-video-wrapper relative lg:h-full w-full">
     <div class="'w-full h-full absolute top-0 right-0 bottom-0 left-0 z-10">
       <div class="w-full h-full">
         <img
@@ -62,55 +53,10 @@
   </div>
 
   <div
-    class={"fixed top-0 left-0 right-0 z-[60] py-10 xs:h-40 md:h-50 md:py-22 theme-dark-gray transition-all duration-300" +
-      (hasScrolledDown ? " bg-white" : "")}
-  >
-    <div class="container m-auto">
-      <div class="cols-container items-center flex space-x-5 justify-between">
-        <a
-          href="/"
-          class="relative flex align-baseline xs:w-3-cols md:w-3-cols lg:w-2-cols"
-        >
-          <LogoSvg invertColor={!hasScrolledDown} />
-        </a>
-        <div class="md:hidden lg:w-6-cols lg:block">
-          <nav>
-            <h2 class="sr-only">Main Navigation</h2>
-            <ul class={"flex flex-row flex-wrap items-baseline"}>
-              {#each navLinks as link}
-                <li class="ml-24 first:ml-0 mt-1">
-                  <a
-                    class={"transition-colors duration-300" + linksClasses}
-                    href={link.href}
-                  >
-                    {link.text}
-                  </a>
-                </li>
-              {/each}
-              <li class="ml-24 first:ml-0 mt-1">
-                <a href={"/"}>
-                  <Button
-                    color={hasScrolledDown ? colors.secondary : undefined}
-                    showLinkArrow
-                    size="sm"
-                    variant="secondary"
-                  >
-                    Donate
-                  </Button>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div
     class="absolute top-0 right-0 bottom-0 left-0 z-[20] pointer-events-none bg-[rgba(0,0,0,0.8)]"
   />
 
-  <div class="container absolute bottom-5 md:bottom-10 left-0 right-0 m-auto">
+  <div class="container absolute bottom-[10vh] left-0 right-0 m-auto">
     <Container class="cols-container container">
       <div
         class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols"
@@ -135,16 +81,23 @@
   </div>
 </header>
 
-<svelte:window bind:scrollY />
-
 <style>
   .hero {
     position: relative;
+  }
+  .bg-video-wrapper {
+    height: 100vh;
+    @media screen and (min-width: 1024px) {
+    }
+    width: 100%;
+    overflow: hidden;
+  }
+  header {
     height: 100vh;
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 5vmax, 6rem);
     line-height: 1.1;
   }
 

@@ -2,7 +2,7 @@
   import Container from "./Container.svelte";
   import Space from "./Space.svelte";
   import footerLinks, { footerSocialLinks } from "src/utils/footerLinks";
-  import LogoIconWhite from "./icons/LogoIconWhite.svelte";
+  import logoIcon from "$lib/logo-icon.png";
 </script>
 
 <footer class="bg-primary text-white py-20 text-[1.5rem]">
@@ -12,7 +12,7 @@
     >
       <div class="flex flex-col gap-y-10 align-middle">
         <div class="space-y-4 max-w-[18rem]">
-          <LogoIconWhite />
+          <img src={logoIcon} width="100" alt="AHRO logo" />
           <h3 class="text-[1.2rem]">AFRICA HEALTH RESEARCH ORGANISATION</h3>
         </div>
 
