@@ -2,8 +2,27 @@
   import "@fontsource-variable/mulish";
   import "../app.css";
   import metaContent from "src/utils/metaContent";
-  //   import "../global.css";
+  import GlobalFooter from "src/components/GlobalFooter.svelte";
+  // import "../global.css";
+  import MobileNav from "src/components/MobileNav.svelte";
+
+  import GlobalHeader from "src/components/GlobalHeader.svelte";
+  let showMenu = false;
+
+  function toggleMenu() {
+    showMenu = !showMenu;
+  }
+  let scrollY: any = null;
+
+  $: hasScrolledDown =
+    typeof scrollY === "number" ? Number(scrollY) > 80 : null;
+
+  $: linksClasses = hasScrolledDown
+    ? " text-primary hover:text-primary hover:underline"
+    : " text-white hover:text-primary hover:underline";
 </script>
+
+<svelte:window bind:scrollY />
 
 <svelte:head>
   <meta charset="utf-8" />
@@ -31,7 +50,11 @@
   <meta property="og:description" content={metaContent.description} />
   <link rel="icon" href="/favicon.ico" />
 </svelte:head>
+
+<GlobalHeader {hasScrolledDown} {toggleMenu} />
+<MobileNav {showMenu} />
 <slot class="main" />
+<GlobalFooter />
 
 <style lang="scss">
   :global(:root) {
