@@ -45,7 +45,7 @@
   </div>
 
   <div
-    class="absolute top-0 right-0 bottom-0 left-0 z-[20] pointer-events-none bg-[rgba(0,0,0,0.8)]"
+    class="absolute top-0 right-0 bottom-0 left-0 z-[20] pointer-events-none bg-[rgba(0,0,0,0.7)]"
   />
 
   <div class="container absolute bottom-[10vh] left-0 right-0 m-auto">
