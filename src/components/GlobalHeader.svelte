@@ -5,6 +5,7 @@
   import Container from "./Container.svelte";
   import LogoIcon from "$lib/logo-icon.png";
   import LogoIconPrimary from "$lib/logo-icon-primary.png";
+  import HeroVideo from "./home/HeroVideo.svelte";
 
   export let hasScrolledDown: boolean | null;
 

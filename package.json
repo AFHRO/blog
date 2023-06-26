@@ -33,6 +33,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@cloudinary/url-gen": "^1.10.1",
     "@fontsource-variable/mulish": "^5.0.4",
     "sass": "^1.63.4"
   }
