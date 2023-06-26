@@ -3,6 +3,7 @@
   import LogoIconSvg from "./icons/LogoIconSvg.svelte";
   import colors from "src/utils/colors";
   import Button from "./Button.svelte";
+  import Container from "./Container.svelte";
 
   export let hasScrolledDown: boolean | null;
 
@@ -21,7 +22,7 @@
       (hasScrolledDown ? " bg-primary lg:bg-white" : "")}
     class:lg:shadow-md={hasScrolledDown}
   >
-    <div class="container m-auto">
+    <Container class="container m-auto">
       <div class="cols-container items-center flex space-x-5 justify-between">
         <a
           href="/"
@@ -86,7 +87,7 @@
           />
         </button>
       </div>
-    </div>
+    </Container>
   </div>
 {/if}
 
