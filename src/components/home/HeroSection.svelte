@@ -28,7 +28,7 @@
     <div class="'w-full h-full absolute top-0 right-0 bottom-0 left-0 z-10">
       <div class="w-full h-full">
         <img
-          src={heroImage}
+          src={"https://res.cloudinary.com/dffrs8zze/image/upload/v1687769742/hero-image-min_imhqll.png"}
           width="1920"
           height="1080"
           alt="Two Scientists in the laboratory"
