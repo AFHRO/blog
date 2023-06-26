@@ -49,7 +49,7 @@
     class="absolute top-0 right-0 bottom-0 left-0 z-[20] pointer-events-none bg-[rgba(0,0,0,0.7)]"
   />
 
-  <div class="container absolute bottom-[20vh] left-0 right-0 m-auto">
+  <div class="container absolute bottom-[15vh] left-0 right-0 m-auto">
     <Container class="cols-container container">
       <div
         class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols"
