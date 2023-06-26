@@ -9,6 +9,7 @@
   import LogoIconSvg from "../icons/LogoIconSvg.svelte";
   import navLinks from "src/utils/navLinks";
   import MobileNav from "../MobileNav.svelte";
+  import HeroVideo from "./HeroVideo.svelte";
 
   onMount(() => {
     const video: any = document.getElementById("background-video");
@@ -40,16 +41,7 @@
         />
       </div>
     </div>
-    <video
-      aria-hidden="true"
-      muted
-      class="relative z-20 h-full w-full object-cover transition-opacity duration-300 pointer visible opacity-100"
-      autoplay
-      loop
-      playsinline
-      ><source src={heroVideo} type="video/mp4" /> Your browser does not support
-      the video tag.
-    </video>
+    <HeroVideo />
   </div>
 
   <div
