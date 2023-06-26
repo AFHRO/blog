@@ -51,7 +51,7 @@
   <link rel="icon" href="/favicon.ico" />
 </svelte:head>
 
-<GlobalHeader {hasScrolledDown} {toggleMenu} />
+<GlobalHeader {hasScrolledDown} {showMenu} {toggleMenu} />
 <MobileNav {showMenu} />
 <slot class="main" />
 <GlobalFooter />
