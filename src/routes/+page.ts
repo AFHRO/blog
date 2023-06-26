@@ -7,3 +7,6 @@ export async function load() {
     recentPosts,
   };
 }
+
+
+export const ssr = false;
