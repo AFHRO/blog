@@ -7,7 +7,7 @@
   <Container class="overflow-hidden">
     <h2 class="text-[3rem] font-extrabold">Our Partners</h2>
     <p class="my-5">
-      we believe in the power of collaboration and fostering meaningful
+      We believe in the power of collaboration and fostering meaningful
       partnerships to drive innovation in global health.
     </p>
 
