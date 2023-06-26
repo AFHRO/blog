@@ -6,6 +6,7 @@
   import LogoIcon from "$lib/logo-icon.png";
   import LogoIconPrimary from "$lib/logo-icon-primary.png";
   import HeroVideo from "./home/HeroVideo.svelte";
+  import { PUBLIC_SITE_NAME } from "$env/static/public";
 
   export let hasScrolledDown: boolean | null;
 
@@ -38,10 +39,11 @@
             <img
               src={hasScrolledDown ? LogoIconPrimary : LogoIcon}
               alt="logo"
-              class="w-[7rem]"
             />
           </span>
-          <div class="ml-2 text-[1.7rem] font-bold w-[25rem]">
+          <div
+            class="ml-2 text-[1.4rem] md:text-[1.7rem] font-bold w-[20rem] md:w-[25rem]"
+          >
             AFRICA HEALTH RESEARCH ORGANISATION
           </div>
         </a>
@@ -63,7 +65,7 @@
                 </li>
               {/each}
               <li class="ml-24 first:ml-0 mt-1">
-                <a href={"/"}>
+                <a href={"/"} aria-label={`Donate to ${PUBLIC_SITE_NAME}`}>
                   <Button
                     color={hasScrolledDown ? colors.secondary : undefined}
                     showLinkArrow
@@ -82,13 +84,13 @@
           on:click={toggleMenu}
           data-collapse-toggle="navbar-default"
           type="button"
-          class="w-30 h-30 rounded-lg focus:outline-none z-[99] lg:hidden"
+          class="w-[5rem] h-[5rem] rounded-lg focus:outline-none z-[99] lg:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
           <span class="sr-only">Open main menu</span>
           <div
-            class="w-[3rem] h-[3rem] nav__toggle-icon"
+            class="w-[5rem] h-[5rem] nav__toggle-icon"
             class:--active={showMenu}
           />
         </button>
@@ -104,7 +106,7 @@
     &::after {
       content: "";
       display: block;
-      width: 3rem;
+      width: 4rem;
       height: 2px;
       background-color: #fff;
       transition: all 0.2s ease-in-out;

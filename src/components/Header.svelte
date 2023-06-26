@@ -14,7 +14,7 @@
 
       <ul>
         <li>
-          <a href="/" aria-label="Blog">Blog</a>
+          <a href="/" aria-label="Go to the Blog">Blog</a>
         </li>
       </ul>
     </nav>

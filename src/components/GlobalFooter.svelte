@@ -17,8 +17,12 @@
         </div>
 
         <div class="flex space-x-10 text-xl">
-          {#each footerSocialLinks as { Icon, link }}
-            <a href={link} class="hover:scale-125 transition-transform">
+          {#each footerSocialLinks as { Icon, name, link }}
+            <a
+              href={link}
+              class="hover:scale-125 transition-transform"
+              aria-label={`Check out our ${name} page`}
+            >
               <Icon />
             </a>
           {/each}
@@ -46,9 +50,9 @@
     <!-- <div
       class="flex flex-col-reverse md:flex-row justify-between text-xl w-full"
     >
-      <a href="/" class="text-[1.5rem]">Privacy Policy</a>
-      <a href="/" class="text-[1.5rem]">Terms and Conditions</a>
-      <a href="/" class="text-[1.5rem]">Cookie Policy</a>
+      <a href="/" aria-label='Learn about our privacy policy' class="text-[1.5rem]">Privacy Policy</a>
+      <a href="/" aria-label='Visit terms page' class="text-[1.5rem]">Terms and Conditions</a>
+      <a href="/" aria-label='Check cookie policy' class="text-[1.5rem]">Cookie Policy</a>
     </div> -->
   </Container>
 </footer>
