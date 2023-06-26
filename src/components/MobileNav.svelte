@@ -25,7 +25,7 @@
           in:fly={{ delay: (index + 1) * 200 }}
           out:fly={{ delay: (index + 1) * 2 }}
         >
-          <a href={link.href}>
+          <a href={link.href} class="text-[5vh]">
             {link.text}
           </a>
         </li>
@@ -36,7 +36,7 @@
           in:fly={{ delay: (links.length + 1) * 200 }}
           out:fly={{ delay: (links.length + 1) * 2 }}
         >
-          <a href={"/"}>
+          <a href={"/"} class="text-[5vh]">
             <Button showLinkArrow size="sm" variant="secondary" block>
               Donate
             </Button>
