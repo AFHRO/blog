@@ -11,7 +11,7 @@
 </script>
 
 <div
-  class="fixed h-[100vh] w-full bg-primary transition-all duration-150 z-50 top-0 bottom-0 left-0 right-0"
+  class="fixed w-full bg-primary transition-all duration-150 z-50 top-0 bottom-0 left-0 right-0"
   id="navbar--mobile"
   class:h-[0]={!showMenu}
   class:h-[100.9vh]={showMenu}
