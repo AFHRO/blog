@@ -1,9 +1,10 @@
 <script lang="ts">
   import navLinks from "src/utils/navLinks";
-  import LogoIconSvg from "./icons/LogoIconSvg.svelte";
   import colors from "src/utils/colors";
   import Button from "./Button.svelte";
   import Container from "./Container.svelte";
+  import LogoIcon from "$lib/logo-icon.png";
+  import LogoIconPrimary from "$lib/logo-icon-primary.png";
 
   export let hasScrolledDown: boolean | null;
 
@@ -33,7 +34,11 @@
         >
           <span class="sr-only">Home</span>
           <span class="w-[7rem]">
-            <LogoIconSvg />
+            <img
+              src={hasScrolledDown ? LogoIconPrimary : LogoIcon}
+              alt="logo"
+              class="w-[7rem]"
+            />
           </span>
           <div class="ml-2 text-[1.7rem] font-bold w-[25rem]">
             AFRICA HEALTH RESEARCH ORGANISATION
