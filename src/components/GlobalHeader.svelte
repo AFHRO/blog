@@ -38,7 +38,6 @@
             <img
               src={hasScrolledDown ? LogoIconPrimary : LogoIcon}
               alt="logo"
-              class="w-[7rem]"
             />
           </span>
           <div class="ml-2 text-[1.7rem] font-bold w-[25rem]">
