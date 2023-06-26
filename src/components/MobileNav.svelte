@@ -1,8 +1,6 @@
 <script lang="ts">
-  import colors from "src/utils/colors";
   import Button from "./Button.svelte";
-  import { fade, fly } from "svelte/transition";
-  import { onMount } from "svelte";
+  import { fly } from "svelte/transition";
   import navLinks from "src/utils/navLinks";
   import Container from "./Container.svelte";
 
@@ -43,6 +41,6 @@
           </a>
         </li>
       {/if}
-    </ul></Container
-  >
+    </ul>
+  </Container>
 </div>
