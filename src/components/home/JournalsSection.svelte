@@ -48,7 +48,10 @@
     {:else}
       <div class="my-10 flex justify-between items-center">
         <h2 class="text-[3rem] font-extrabold">Our Journals</h2>
-        <a href="/blog" class="text-primary-500 hover:underline text-secondary"
+        <a
+          href="/"
+          aria-label="See all Journals on AHRO Publishing"
+          class="text-primary-500 hover:underline text-secondary"
           >Explore jounrals</a
         >
       </div>

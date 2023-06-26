@@ -13,7 +13,10 @@
     {:else}
       <div class="mb-10 flex justify-between items-center">
         <h2 class="text-[3rem] font-extrabold">Latest from us</h2>
-        <a href="/blog" class="text-primary-500 hover:underline text-secondary"
+        <a
+          href="/blog"
+          aria-label="See all articles on the blog"
+          class="text-primary-500 hover:underline text-secondary"
           >Visit the blog</a
         >
       </div>

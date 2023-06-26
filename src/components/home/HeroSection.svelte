@@ -10,6 +10,7 @@
   import navLinks from "src/utils/navLinks";
   import MobileNav from "../MobileNav.svelte";
   import HeroVideo from "./HeroVideo.svelte";
+  import { PUBLIC_SITE_NAME } from "$env/static/public";
 
   onMount(() => {
     const video: any = document.getElementById("background-video");
@@ -62,7 +63,7 @@
           and capacity building.
         </p>
         <div class="mt-10">
-          <a href="/donation"
+          <a href="/" aria-label={`Learn more about ${PUBLIC_SITE_NAME}`}
             ><Button showLinkArrow size="lg" variant="primary"
               >Learn more</Button
             >

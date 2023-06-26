@@ -23,7 +23,11 @@
           in:fly={{ delay: (index + 1) * 200 }}
           out:fly={{ delay: (index + 1) * 2 }}
         >
-          <a href={link.href} class="text-[5vh]">
+          <a
+            href={link.href}
+            class="text-[5vh]"
+            aria-label={`Go to ${link.text} page`}
+          >
             {link.text}
           </a>
         </li>

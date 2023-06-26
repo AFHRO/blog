@@ -15,7 +15,9 @@
           <h5>{linkObject.title}</h5>
           <Space direction="column">
             {#each linkObject.links as link}
-              <a href={link.url}>{@html link.title}</a>
+              <a href={link.url} aria-label={`Footer link to ${link.title}`}
+                >{@html link.title}</a
+              >
             {/each}
           </Space>
         </section>
@@ -26,12 +28,12 @@
         <span class="footer__copyright"
           >{@html "&copy"} {new Date().getFullYear()} AHRO</span
         >
-        <a href="/">Privacy Policy</a>
-        <a href="/">Terms and Conditions</a>
-        <a href="/">Cookie Policy</a>
+        <a href="/" aria-label="visit privacy policy page">Privacy Policy</a>
+        <a href="/" aria-label="Learn about our terms">Terms and Conditions</a>
+        <a href="/" aria-label="Check cookie ploicy">Cookie Policy</a>
       </div>
       <div>
-        <a href="/"> Facebook </a>
+        <a href="/" aria-label="Check our facbook page"> Facebook </a>
         <a href="/"> Twitter </a>
         <a href="/"> Instagram </a>
       </div>
