@@ -27,6 +27,7 @@
   autoplay
   loop
   playsinline
+  id="background-video"
   ><source src={videoUrl} type="video/mp4" /> Your browser does not support the video
   tag.
 </video>
