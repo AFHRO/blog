@@ -1,6 +1,6 @@
 <script>
   import Container from "../Container.svelte";
-  import partnersSvg from "$lib/partners.svg";
+  import partnersSvg from "$lib/partnersList.svg";
 </script>
 
 <section>
