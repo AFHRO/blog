@@ -16,7 +16,7 @@
         <a
           href="/blog"
           aria-label="See all articles on the blog"
-          class="text-primary-500 hover:underline text-secondary"
+          class="text-primary-500 hover:underline text-[2rem] text-secondary"
           >Visit the blog</a
         >
       </div>

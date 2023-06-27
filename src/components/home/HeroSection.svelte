@@ -18,7 +18,7 @@
     <div class="'w-full h-full absolute top-0 right-0 bottom-0 left-0 z-10">
       <div class="w-full h-full">
         <img
-          src={"https://res.cloudinary.com/dffrs8zze/image/upload/v1687769742/hero-image-min_imhqll.png"}
+          src={"https://res.cloudinary.com/ahromaster/image/upload/c_scale,w_1119/v1687769742/hero-image-min_imhqll.png"}
           width="1920"
           height="1080"
           alt="Two Scientists in the laboratory"
@@ -40,7 +40,7 @@
   <div class="container absolute bottom-[15vh] left-0 right-0 m-auto">
     <Container class="cols-container container">
       <div
-        class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols"
+        class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols lg:max-w-[100rem]"
       >
         <h1 class="text-white font-bold">
           Championing the <span class="text-secondary">One Health</span> agenda

@@ -51,7 +51,7 @@
         <a
           href="/"
           aria-label="See all Journals on AHRO Publishing"
-          class="text-primary-500 hover:underline text-secondary"
+          class="text-primary-500 text-[2rem] hover:underline text-secondary"
           >Explore jounrals</a
         >
       </div>

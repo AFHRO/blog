@@ -181,7 +181,7 @@
   }
 
   :global(a) {
-    font-size: 2rem;
+    font-size: inherit;
   }
 
   :global(input) {

@@ -19,7 +19,7 @@
 
 <style lang="scss">
   .container {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 clamp(20px, 5vw, 40px);
 
