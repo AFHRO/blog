@@ -66,21 +66,21 @@ export const footerSocialLinks = [
   {
     name: "facebook",
     Icon: FacebookIcon,
-    link: "/",
+    link: "https://www.facebook.com/AHROUNI/",
   },
   {
     name: "twitter",
     Icon: TwitterIcon,
-    link: "/",
+    link: "https://twitter.com/AHROuniversity",
   },
   {
     name: "instagram",
     Icon: InstagramIcon,
-    link: "/",
+    link: "https://www.instagram.com/ahro_uni/",
   },
   {
     name: "linkedin",
     Icon: LinkedinIcon,
-    link: "/",
+    link: "https://uk.linkedin.com/company/africahealthresearchorganisation",
   },
 ];
