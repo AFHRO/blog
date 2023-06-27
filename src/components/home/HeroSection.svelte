@@ -40,7 +40,7 @@
   <div class="container absolute bottom-[15vh] left-0 right-0 m-auto">
     <Container class="cols-container container">
       <div
-        class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols"
+        class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols lg:max-w-[100rem]"
       >
         <h1 class="text-white font-bold">
           Championing the <span class="text-secondary">One Health</span> agenda
