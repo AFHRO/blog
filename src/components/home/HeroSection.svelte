@@ -1,14 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import heroVideo from "$lib/hero-alt.mp4";
-  import heroImage from "$lib/hero-image.png";
-  import LogoSvg from "src/components/icons/LogoSvg.svelte";
   import Container from "src/components/Container.svelte";
   import Button from "src/components/Button.svelte";
-  import colors from "src/utils/colors";
-  import LogoIconSvg from "../icons/LogoIconSvg.svelte";
-  import navLinks from "src/utils/navLinks";
-  import MobileNav from "../MobileNav.svelte";
   import HeroVideo from "./HeroVideo.svelte";
   import { PUBLIC_SITE_NAME } from "$env/static/public";
 
@@ -17,15 +10,10 @@
     if (video) {
       video.play();
     }
-    // scroll to top on page load
-    window.scrollTo(0, 0);
   });
 </script>
 
 <header class="hero ui-hero">
-  <!-- 
-    nav bar removed from here
-   -->
   <div class="bg-video-wrapper relative lg:h-full w-full">
     <div class="'w-full h-full absolute top-0 right-0 bottom-0 left-0 z-10">
       <div class="w-full h-full">
@@ -92,21 +80,5 @@
   h1 {
     font-size: clamp(2.5rem, 5vmax, 6rem);
     line-height: 1.1;
-  }
-
-  .logo {
-    height: 64px;
-    width: auto;
-    margin-bottom: 24px;
-  }
-
-  .nav-link {
-    color: #fff;
-    margin-right: 16px;
-    transition: color 0.3s ease-in-out;
-  }
-
-  .nav-link:hover {
-    color: #ccc;
   }
 </style>

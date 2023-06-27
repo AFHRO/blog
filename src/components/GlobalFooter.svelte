@@ -34,7 +34,7 @@
 
       {#each footerLinks as linkObject}
         <section class="footer__section">
-          <h5 class="font-extrabold text-4xl mb-10">{linkObject.title}</h5>
+          <h4 class="font-extrabold text-4xl mb-10">{linkObject.title}</h4>
           <Space direction="column">
             {#each linkObject.links as link}
               <a
