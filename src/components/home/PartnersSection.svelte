@@ -25,7 +25,8 @@
     animation: scroll 75s linear infinite;
     width: 168rem;
     max-width: 100%;
-    height: 20rem;
+    height: 15rem;
+    background-size: cover;
   }
 
   @keyframes scroll {
