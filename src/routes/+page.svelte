@@ -12,7 +12,9 @@
 <HeroSection />
 
 <main class="bg-white py-[5rem]">
-  <RecentArticlesSection {recentPosts} />
+  {#if recentPosts.length}
+    <RecentArticlesSection {recentPosts} />
+  {/if}
   <JournalsSection />
   <PartnersSection />
 </main>
