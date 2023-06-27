@@ -52,10 +52,10 @@
           <nav>
             <h2 class="sr-only">Main Navigation</h2>
             <ul
-              class={"flex flex-row flex-wrap items-baseline p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0"}
+              class={"flex flex-row flex-wrap items-baseline p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-20 md:mt-0"}
             >
               {#each navLinks as link}
-                <li class="ml-24 first:ml-0 mt-1">
+                <li class="ml-24 first:ml-0 mt-1 text-[1.6rem]">
                   <a
                     class={"transition-colors duration-300" + linksClasses}
                     href={link.href}
