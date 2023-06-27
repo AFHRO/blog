@@ -13,9 +13,8 @@
 
 <button
   class:text-white={isPrimaryOrSecondary && !color}
-  class:p-6={isPrimaryOrSecondary && size === "lg"}
+  class:p-5={isPrimaryOrSecondary && size === "lg"}
   class:p-4={isPrimaryOrSecondary && size === "md"}
-  class:px-4={isPrimaryOrSecondary && size === "sm"}
   class:py-2={isPrimaryOrSecondary && size === "sm"}
   class:rounded-lg={isPrimaryOrSecondary}
   class:text-[`${color}`]={isPrimaryOrSecondary && color}
