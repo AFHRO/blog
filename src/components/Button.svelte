@@ -17,6 +17,7 @@
   class:p-4={isPrimaryOrSecondary && size === "md"}
   class:px-4={isPrimaryOrSecondary && size === "sm"}
   class:py-2={isPrimaryOrSecondary && size === "sm"}
+  class:rounded-lg={isPrimaryOrSecondary}
   class:text-[`${color}`]={isPrimaryOrSecondary && color}
   class:border-white={variant === "secondary" && !color}
   class:border-solid={variant === "secondary"}
