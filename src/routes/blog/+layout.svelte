@@ -10,7 +10,7 @@
   <slot class="main" />
 </main>
 
-<Footer />
+
 
 <style lang="scss">
   .main-wrapper {

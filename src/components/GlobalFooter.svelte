@@ -39,6 +39,8 @@
             {#each linkObject.links as link}
               <a
                 href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 class="block w-full hover:underline text-[1.5rem]"
                 >{@html link.title}</a
               >

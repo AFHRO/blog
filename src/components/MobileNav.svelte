@@ -21,7 +21,7 @@
         <li
           class="w-full mt-4 text-white"
           in:fly={{ delay: (index + 1) * 200 }}
-          out:fly={{ delay: (index + 1) * 2 }}
+          out:fly
         >
           <a
             href={link.href}
