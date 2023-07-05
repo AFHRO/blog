@@ -9,7 +9,7 @@
   export let currentPage: number | string = 1;
 
   import { page } from "$app/stores";
-  import { afterNavigate, goto } from "$app/navigation";
+  import { goto } from "$app/navigation";
   import { onMount } from "svelte";
 
   let searchTextValue: any = "";
