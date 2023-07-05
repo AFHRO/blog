@@ -7,24 +7,16 @@
 
   export let post: Post;
   export let index: number;
-  let categoryName = "";
 
   const postTitle =
     post.title.length > 100 ? `${post.title.substring(0, 50)}...` : post.title;
 
-  onMount(async () => {
-    const categoryId = post.categories[0];
-    let res = await fetch(`${PUBLIC_BLOG_URL}/categories/${categoryId}`);
-    const category = await res.json();
-
-    categoryName = category.name;
-
-    // break at 10th character
-    categoryName =
-      categoryName.length > 15
-        ? `${categoryName.substring(0, 15)}...`
-        : categoryName;
-  });
+  $: categoryNameValue =
+    typeof post.categoryName === "string"
+      ? post.categoryName?.length > 15
+        ? `${post.categoryName.substring(0, 15)}...`
+        : post.categoryName
+      : undefined;
 </script>
 
 <a
@@ -47,7 +39,7 @@
     </div>
     <div class="post-card__info">
       <div class="post-card__info__category">
-        {@html categoryName}
+        {@html categoryNameValue}
       </div>
       <div class="post-card__info__date">
         {post.date}

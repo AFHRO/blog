@@ -16,13 +16,15 @@
 {:else if !posts.length}
   <div />
 {:else}
-  <section>
+  <section class="min-h-[60vh]">
     {#each posts as post, index}
       <Card {post} {index} />
     {/each}
   </section>
   {#if posts.length >= 9}
-    <Pagination {currentPage} />
+    <div class="flex justify-center my-20">
+      <Pagination {currentPage} />
+    </div>
   {/if}
 {/if}
 

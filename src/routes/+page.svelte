@@ -11,7 +11,7 @@
 
 <HeroSection />
 
-<main class="bg-white py-[5rem]">
+<main class="bg-white py-[5rem] min-h-[100vh]">
   {#if recentPosts.length}
     <RecentArticlesSection {recentPosts} />
   {/if}
