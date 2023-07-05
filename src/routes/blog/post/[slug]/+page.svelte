@@ -7,7 +7,7 @@
   export let data: any;
 </script>
 
-<section in:fade={{ delay: 500, duration: 500 }} out:fade>
+<section in:fade={{ delay: 500, duration: 500 }} out:fade class="min-h-[100vh]">
   <PostHero post={transformWordPressPost(data)} />
   <PostBody content={data?.content} />
 </section>

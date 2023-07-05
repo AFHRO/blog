@@ -16,7 +16,7 @@
 {:else if !posts.length}
   <div />
 {:else}
-  <section>
+  <section class="min-h-[60vh]">
     {#each posts as post, index}
       <Card {post} {index} />
     {/each}
