@@ -4,15 +4,11 @@ const transformWordPressPost = (post: any) => {
   const {
     title,
     content,
-    excerpt,
     date,
     modified,
     slug,
-    featured_media,
-    jetpack_featured_media_url,
     categories,
     id,
-    better_featured_image,
     _embedded,
   } = post;
 
@@ -23,7 +19,6 @@ const transformWordPressPost = (post: any) => {
   return {
     title: convertUnicodeTOString(title),
     content,
-    excerpt,
     date: formatDate(date),
     modified,
     slug,
@@ -33,6 +28,7 @@ const transformWordPressPost = (post: any) => {
     featured_media: post.featuredImage?.node.sourceUrl,
               categoryName: post.categories.nodes[0].name,
     author: `${post.author?.node.firstName} ${post.author?.node.lastName}`,
+    excerpt: convertUnicodeTOString(post.excerpt),
   };
 };
 

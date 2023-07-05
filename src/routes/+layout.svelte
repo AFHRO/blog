@@ -25,8 +25,6 @@
 
 <svelte:window bind:scrollY />
 
-<PageHead />
-
 <GlobalHeader {hasScrolledDown} {showMenu} {toggleMenu} />
 <MobileNav {showMenu} />
 <slot class="main min-h-[60vh]" />
