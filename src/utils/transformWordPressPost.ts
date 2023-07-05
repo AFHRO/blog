@@ -16,24 +16,18 @@ const transformWordPressPost = (post: any) => {
     _embedded,
   } = post;
 
-  const { author } = _embedded;
+  const { author } = _embedded||{};
 
   return {
-    title: convertUnicodeTOString(title.rendered),
-    content: content.rendered,
-    excerpt: excerpt.rendered,
+    title: convertUnicodeTOString(title),
+    content,
+    excerpt,
     date: formatDate(date),
     modified,
     slug,
-    featured_media:
-      jetpack_featured_media_url ||
-      better_featured_image?.source_url ||
-      featured_media,
-
     categories,
     id,
-    author: author[0].name,
-    reading_time: getReadingTime(content.rendered),
+    reading_time: getReadingTime(content),
   };
 };
 

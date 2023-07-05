@@ -10,4 +10,5 @@ export interface Post {
 	categories: number[];
 	author: string;
 	reading_time: number;
+	categoryName?: string;
 }
