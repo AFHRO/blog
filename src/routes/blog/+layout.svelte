@@ -1,6 +1,5 @@
 <script lang="ts">
   import "@fontsource-variable/mulish";
-  import Footer from "src/components/Footer.svelte";
   import Header from "src/components/Header.svelte";
   import { fade } from "svelte/transition";
 </script>
