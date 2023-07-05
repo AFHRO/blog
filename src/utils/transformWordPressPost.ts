@@ -28,7 +28,7 @@ const transformWordPressPost = (post: any) => {
     featured_media: post.featuredImage?.node.sourceUrl,
               categoryName: post.categories.nodes[0].name,
     author: `${post.author?.node.firstName} ${post.author?.node.lastName}`,
-    excerpt: convertUnicodeTOString(post.excerpt),
+    excerpt:post.excerpt? convertUnicodeTOString(post.excerpt): undefined,
   };
 };
 
