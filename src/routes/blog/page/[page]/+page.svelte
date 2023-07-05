@@ -12,8 +12,13 @@
   afterNavigate(async () => {
     posts = [];
     loading = true;
-    posts = await fetchPosts(data.page);
-    loading = false;
+    try {
+      posts = await fetchPosts(data.page);
+      loading = false;
+    } catch (error) {
+      console.log(error);
+      loading = false;
+    }
   });
 </script>
 

@@ -20,8 +20,13 @@
   afterNavigate(async () => {
     posts = [];
     loading = true;
-    posts = await searchPosts(searchText, pageNumber);
-    loading = false;
+    try {
+      posts = await searchPosts(searchText, pageNumber);
+      loading = false;
+    } catch (error) {
+      console.log(error);
+      loading = false;
+    }
   });
 </script>
 

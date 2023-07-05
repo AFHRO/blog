@@ -11,8 +11,13 @@
   onMount(async () => {
     posts = [];
     loading = true;
-    posts = await fetchPosts();
-    loading = false;
+    try {
+      posts = await fetchPosts();
+      loading = false;
+    } catch (error) {
+      console.log(error);
+      loading = false;
+    }
   });
 </script>
 
