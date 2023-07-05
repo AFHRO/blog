@@ -1,7 +1,7 @@
 <script lang="ts">
   import "@fontsource-variable/mulish";
   import "../app.css";
-  import metaContent from "src/utils/metaContent";
+
   import GlobalFooter from "src/components/GlobalFooter.svelte";
   // import "../global.css";
   import MobileNav from "src/components/MobileNav.svelte";
@@ -24,8 +24,6 @@
 </script>
 
 <svelte:window bind:scrollY />
-
-<PageHead />
 
 <GlobalHeader {hasScrolledDown} {showMenu} {toggleMenu} />
 <MobileNav {showMenu} />
