@@ -22,7 +22,9 @@
     {/each}
   </section>
   {#if posts.length >= 9}
-    <Pagination {currentPage} />
+    <div class="flex justify-center my-20">
+      <Pagination {currentPage} />
+    </div>
   {/if}
 {/if}
 
