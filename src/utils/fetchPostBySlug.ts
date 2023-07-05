@@ -1,9 +1,41 @@
-import { PUBLIC_BLOG_URL } from '$env/static/public';
+import graphqlClient from "./graphqlClient";
+
 
 const fetchPostBySlug = async (slug: string) => {
-	const response = await fetch(`${PUBLIC_BLOG_URL}/posts?_embed&slug=${slug}`);
-	const posts = await response.json();
-	return posts[0];
+	const response:any= await graphqlClient.request(`{
+		post(id: "${slug}", idType: SLUG) {
+		  id
+		  title
+		  date
+		  content
+		  excerpt
+		  slug
+		  featuredImage {
+			node {
+			  sourceUrl
+			}
+		  }
+		  categories {
+			nodes {
+			  id
+			  name
+			  slug
+			}
+		  }
+		  author {
+			node {
+			  firstName
+			  lastName
+			}
+		  }
+		}
+	  }`);
+
+	let post = response?.post;
+
+	
+
+	return post;
 };
 
 export default fetchPostBySlug;

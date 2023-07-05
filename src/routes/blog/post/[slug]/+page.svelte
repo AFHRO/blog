@@ -9,7 +9,7 @@
 
 <section in:fade={{ delay: 500, duration: 500 }} out:fade>
   <PostHero post={transformWordPressPost(data)} />
-  <PostBody content={data?.content?.rendered} />
+  <PostBody content={data?.content} />
 </section>
 
 <style lang="scss">

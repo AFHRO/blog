@@ -36,15 +36,7 @@ const fetchPostsFromWP = async (page=1, size=9, search?: string) => {
         }
       }`);
       const posts = response?.posts.nodes.map((post:any) => {
-          
-         
-        
-          return {
-              featured_media: post.featuredImage?.node.sourceUrl,
-              categoryName: post.categories.nodes[0].name,
-              author: `${post.author.node.firstName} ${post.author.node.lastName}`,
-              ...transformWordPressPost(post),
-            }
+         return {...transformWordPressPost(post)}
 
     });
 

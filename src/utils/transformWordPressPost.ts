@@ -18,6 +18,8 @@ const transformWordPressPost = (post: any) => {
 
   const { author } = _embedded||{};
 
+
+
   return {
     title: convertUnicodeTOString(title),
     content,
@@ -28,6 +30,9 @@ const transformWordPressPost = (post: any) => {
     categories,
     id,
     reading_time: getReadingTime(content),
+    featured_media: post.featuredImage?.node.sourceUrl,
+              categoryName: post.categories.nodes[0].name,
+    author: `${post.author?.node.firstName} ${post.author?.node.lastName}`,
   };
 };
 
