@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import { PUBLIC_BLOG_URL } from "$env/static/public";
   import type { Post } from "src/types/posts";
+  import routePaths from "src/utils/routePaths";
 
   export let post: Post;
   let categoryName = "";
@@ -17,16 +18,16 @@
 
     categoryName = category.name;
 
-    // break at 10th character
+    // break at nth character
     categoryName =
-      categoryName.length > 15
+      categoryName?.length > 15
         ? `${categoryName.substring(0, 15)}...`
         : categoryName;
   });
 </script>
 
 <a
-  href={`/blog/post/${post.slug}`}
+  href={`${routePaths.blogPost}/${post.slug}`}
   class="rounded-lg h-full hover:scale-[1.02] transition-all"
 >
   <img
