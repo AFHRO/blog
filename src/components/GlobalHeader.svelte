@@ -5,8 +5,9 @@
   import Container from "./Container.svelte";
   import LogoIcon from "$lib/logo-icon.png";
   import LogoIconPrimary from "$lib/logo-icon-primary.png";
-  import HeroVideo from "./home/HeroVideo.svelte";
   import { PUBLIC_SITE_NAME } from "$env/static/public";
+  import { page } from "$app/stores";
+  import routePaths from "src/utils/routePaths";
 
   export let hasScrolledDown: boolean | null;
 
@@ -14,32 +15,33 @@
 
   export let showMenu: boolean;
 
-  $: linksClasses = hasScrolledDown
-    ? " text-primary hover:text-primary hover:underline"
-    : " text-white hover:text-primary hover:underline";
+  $: isHomePage = $page.url.pathname === routePaths.home;
+
+  $: isTransparent = isHomePage ? !hasScrolledDown : false;
+  $: linksClasses = isTransparent
+    ? " text-white hover:text-primary hover:underline"
+    : " text-primary hover:text-primary hover:underline";
 </script>
 
-{#if typeof hasScrolledDown === "boolean"}
+{#if typeof hasScrolledDown === "boolean" || !isHomePage}
   <div
     class={"fixed top-0 left-0 right-0 z-[60] py-10 xs:h-40 md:h-50 md:py-22  transition-all duration-300" +
-      (hasScrolledDown ? " bg-primary lg:bg-white" : "")}
-    class:lg:shadow-md={hasScrolledDown}
+      (!isTransparent ? " bg-primary lg:bg-white" : "")}
+    class:lg:shadow-md={!isTransparent}
+    class:sticky={!isTransparent}
   >
     <Container class="container m-auto">
       <div class="cols-container items-center flex space-x-5 justify-between">
         <a
           href="/"
           class="relative flex align-baseline xs:w-3-cols md:w-3-cols lg:w-2-cols items-center space-x-2 transition-colors duration-300 z-[99]"
-          class:lg:text-primary={hasScrolledDown}
-          class:lg:text-white={!hasScrolledDown}
+          class:lg:text-primary={!isTransparent}
+          class:lg:text-white={!!isTransparent}
           class:text-white={true}
         >
           <span class="sr-only">Home</span>
           <span class="w-[7rem]">
-            <img
-              src={hasScrolledDown ? LogoIconPrimary : LogoIcon}
-              alt="logo"
-            />
+            <img src={!isTransparent ? LogoIconPrimary : LogoIcon} alt="logo" />
           </span>
           <div
             class="ml-2 text-[1.4rem] md:text-[1.7rem] font-bold w-[20rem] md:w-[25rem]"
@@ -67,7 +69,7 @@
               <li class="ml-24 first:ml-0 mt-1">
                 <a href={"/"} aria-label={`Donate to ${PUBLIC_SITE_NAME}`}>
                   <Button
-                    color={hasScrolledDown ? colors.secondary : undefined}
+                    color={!isTransparent ? colors.secondary : undefined}
                     showLinkArrow
                     size="sm"
                     variant="secondary"
