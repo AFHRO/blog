@@ -3,7 +3,7 @@ import fetchContentfulData from "src/utils/fetchContentfulData"
 export const load = async () => {
     const STAFF_QUERY = `
     {
-        staffCollection( limit: 10, locale: "en-US" ) {
+        staffCollection( locale: "en-US" ) {
         items {
             name
             image {
