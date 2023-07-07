@@ -3,11 +3,10 @@
   import "../app.css";
 
   import GlobalFooter from "src/components/GlobalFooter.svelte";
-  // import "../global.css";
   import MobileNav from "src/components/MobileNav.svelte";
 
   import GlobalHeader from "src/components/GlobalHeader.svelte";
-  import PageHead from "src/components/PageHead.svelte";
+
   let showMenu = false;
 
   function toggleMenu() {
@@ -17,10 +16,6 @@
 
   $: hasScrolledDown =
     typeof scrollY === "number" ? Number(scrollY) > 80 : null;
-
-  $: linksClasses = hasScrolledDown
-    ? " text-primary hover:text-primary hover:underline"
-    : " text-white hover:text-primary hover:underline";
 </script>
 
 <svelte:window bind:scrollY />
