@@ -6,6 +6,7 @@
   import MobileNav from "src/components/MobileNav.svelte";
 
   import GlobalHeader from "src/components/GlobalHeader.svelte";
+  import GTagManagerScript from "src/components/GTagManagerScript.svelte";
 
   let showMenu = false;
 
@@ -17,6 +18,8 @@
   $: hasScrolledDown =
     typeof scrollY === "number" ? Number(scrollY) > 80 : null;
 </script>
+
+<GTagManagerScript />
 
 <svelte:window bind:scrollY />
 
