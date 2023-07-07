@@ -5,7 +5,7 @@
 
 <section class="bg-white">
   <div
-    class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 min-h-[60vh] flex align-middle justify-center flex-col space-y-5"
+    class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 min-h-[70vh] flex align-middle justify-center flex-col space-y-5"
   >
     <h1 class={headingClass}>Improving Global Health through research</h1>
     <p

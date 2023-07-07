@@ -8,9 +8,16 @@
 
 <section class="bg-white">
   <Container>
-    <h2 class="text-6xl text-primary mb-24 text-center font-medium">
-      Meet our staff
-    </h2>
+    <div class="text-center lg:text-left lg:max-w-[70rem]">
+      <h2 class="text-6xl text-primary mb-5 font-medium">
+        The passionat people that drive our success
+      </h2>
+      <p class="mb-20 text-gray-500">
+        A team of talented individuals who are passionate about advancing
+        scientific knowledge. From esteemed researchers and seasoned editors to
+        talented designers and meticulous proofreaders.
+      </p>
+    </div>
     <div
       class="grid gap-24 justify-between place-items-center grid-cols-1 md:grid-cols-3 lg:grid-cols-4"
     >
