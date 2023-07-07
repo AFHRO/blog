@@ -11,10 +11,10 @@
     <p
       class="mb-8 text-2xl font-normal text-gray-500 lg:text-3xl sm:px-16 lg:px-48"
     >
-      Africa Health Research Organisation (AHRO) is a non-profit organisation
-      that aims to improve global health through research. We are a team of
-      researchers, scientists, and health professionals who are passionate about
-      improving global health through research.
+      Africa Health Research Organisation (AHRO) is a non-profit award-wining
+      organisation that aims to improve global health through research. We are a
+      team of researchers, scientists, and health professionals who are
+      passionate about improving global health through research.
     </p>
   </div>
 </section>

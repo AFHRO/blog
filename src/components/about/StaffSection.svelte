@@ -9,8 +9,8 @@
 <section class="bg-white">
   <Container>
     <div class="text-center lg:text-left lg:max-w-[70rem]">
-      <h2 class="text-6xl text-primary mb-5 font-medium">
-        The passionat people that drive our success
+      <h2 class="text:4xl lg:text-8xl text-primary mb-10 font-medium">
+        The passionate people that drive our success
       </h2>
       <p class="mb-20 text-gray-500">
         A team of talented individuals who are passionate about advancing
