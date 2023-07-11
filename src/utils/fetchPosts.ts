@@ -30,4 +30,3 @@ console.log(posts);
 };
 
 export default fetchPosts;
-// CFPAT-b56780-4iJ20sTMGOvbwwRwgAPzNp4lpE8u4ZD-e21M
