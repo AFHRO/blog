@@ -5,7 +5,7 @@ import transformWordPressPost, { formatDate } from "./transformWordPressPost";
 export const fetchPostsFromContentful = async (page=1, size=9, search?: string) => {
     const POSTS_QUERY = `
     {
-        blogPostCollection( locale: "en-US", order: [originalPublishDate_ASC],
+        blogPostCollection( locale: "en-US", order: [originalPublishDate_DESC],
         ${search?`where: {
             OR: [
                 {title_contains: "${search}"},
