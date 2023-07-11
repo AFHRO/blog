@@ -27,6 +27,7 @@ export const fetchPostsFromContentful = async (page=1, size=9, search?: string) 
                         json
 
                     }
+                    slug
                     categoryName: category
             }
     }

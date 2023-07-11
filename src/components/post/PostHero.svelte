@@ -7,10 +7,6 @@
   import StopwatchIcon from "../icons/StopwatchIcon.svelte";
 
   export let post: any;
-
-  let categoryId: string = post.categories[0];
-
-  const categories = categoriesJson as any;
 </script>
 
 <div class="post-hero">
