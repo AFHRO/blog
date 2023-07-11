@@ -23,7 +23,6 @@ const fetchPosts = async (page: number = 1, size = 9) => {
   // return posts;
 const posts= await fetchPostsFromContentful(page, size);
 
-console.log(posts);
 
   return posts;
   
