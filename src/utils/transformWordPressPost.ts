@@ -1,4 +1,3 @@
-import getRichTextString from "./getRichTextString";
 import convertUnicodeTOString from "./htmlCodeToSymbol";
 
 const transformWordPressPost = (post: any) => {

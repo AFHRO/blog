@@ -1,6 +1,6 @@
 import fetchContentfulData from "./fetchContentfulData";
 import getRichTextString from "./getRichTextString";
-import transformWordPressPost, { formatDate } from "./transformWordPressPost";
+import transformWordPressPost from "./transformWordPressPost";
 
 export const fetchPostsFromContentful = async (page=1, size=9, search?: string) => {
     const POSTS_QUERY = `
