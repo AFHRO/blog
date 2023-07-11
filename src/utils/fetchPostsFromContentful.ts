@@ -46,12 +46,13 @@ export const fetchPostsFromContentful = async (page=1, size=9, search?: string) 
       
         post.featured_media = post.featuredImage?.url;
 
-        post.content = getRichTextString(post.content.json);
+        post.content = getRichTextString(post.content?.json||"");
       
-        post= transformWordPressPost(post);
+        post = transformWordPressPost(post);
 
         return post;
-    })
+    });
+
 
 
 
