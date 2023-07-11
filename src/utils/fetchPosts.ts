@@ -1,4 +1,5 @@
 
+import { fetchPostsFromContentful } from "./fetchPostsFromContentful";
 import fetchPostsFromWP from "./fetchPostsFromWP";
 
 const fetchPosts = async (page: number = 1, size = 9) => {
@@ -20,9 +21,13 @@ const fetchPosts = async (page: number = 1, size = 9) => {
 
 
   // return posts;
-const posts= await fetchPostsFromWP(page, size);
+const posts= await fetchPostsFromContentful(page, size);
+
+console.log(posts);
 
   return posts;
+  
 };
 
 export default fetchPosts;
+// CFPAT-b56780-4iJ20sTMGOvbwwRwgAPzNp4lpE8u4ZD-e21M

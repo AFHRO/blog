@@ -3,7 +3,7 @@
   import type { Post } from "../types/posts";
   import htmlCodeToSymbol from "../utils/htmlCodeToSymbol";
   import { onMount } from "svelte";
-  import { PUBLIC_BLOG_URL } from "$env/static/public";
+  import getRichTextString from "src/utils/getRichTextString";
 
   export let post: Post;
   export let index: number;
@@ -17,6 +17,10 @@
         ? `${post.categoryName.substring(0, 15)}...`
         : post.categoryName
       : undefined;
+
+  // onMount(async () => {
+  //   console.log(getRichTextString(post.content.json));
+  // });
 </script>
 
 <a

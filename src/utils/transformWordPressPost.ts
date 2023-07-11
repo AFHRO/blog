@@ -1,32 +1,40 @@
+import getRichTextString from "./getRichTextString";
 import convertUnicodeTOString from "./htmlCodeToSymbol";
 
 const transformWordPressPost = (post: any) => {
   const {
     title,
     content,
+    originalPublishDate,
     date,
     modified,
     slug,
     categories,
+    categoryName,
     id,
     _embedded,
   } = post;
 
-  const { author } = _embedded||{};
+  
 
+  const { author } = _embedded||{};
 
 
   return {
     title: convertUnicodeTOString(title),
     content,
-    date: formatDate(date),
+    date: formatDate(originalPublishDate?originalPublishDate:date),
     modified,
     slug,
     categories,
+    categoryName,
     id,
     reading_time: getReadingTime(content),
-    featured_media: post.featuredImage?.node.sourceUrl,
-              categoryName: post.categories.nodes[0].name,
+   
+
+    featured_media: post.featured_media,
+    // featured_media: post.featuredImage?.node.sourceUrl,
+              // categoryName: post.categories.nodes[0].name,
     author: `${post.author?.node.firstName} ${post.author?.node.lastName}`,
     excerpt:post.excerpt? convertUnicodeTOString(post.excerpt): undefined,
   };
