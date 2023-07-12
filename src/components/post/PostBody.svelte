@@ -1,6 +1,7 @@
 <script lang="ts">
   import Container from "../Container.svelte";
   import SharePost from "./SharePost.svelte";
+  import SubscribeCard from "./SubscribeCard.svelte";
 
   export let content: string;
 </script>
@@ -11,6 +12,7 @@
 
     <div class="post__body lg:max-w-[60rem]">
       {@html content}
+      <SubscribeCard />
     </div>
   </div>
 </Container>
