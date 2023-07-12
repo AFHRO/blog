@@ -13,5 +13,5 @@
   <h5 class="mb-4 mt-20 text-3xl font-medium text-secondary text-center">
     {staff.name}
   </h5>
-  <span class="text-2xl text-gray-500">{staff.department}</span>
+  <span class="text-2xl text--500">{staff.department}</span>
 </div>

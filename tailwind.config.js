@@ -8,6 +8,7 @@ export default {
         // secondary: "#f95b26",
         secondary: "#E52424",
         secondaryDark: "hsl(15, 100%, 45%)",
+        secondaryLight:"hsl(15, 100%, 65%)",
 
         blue: {
           950: "#17275c",
