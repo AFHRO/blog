@@ -20,7 +20,7 @@
           {#each footerSocialLinks as { Icon, name, link }}
             <a
               href={link}
-              class="hover:scale-125 transition-transform"
+              class="hover:scale-125 transition-transform block w-10"
               aria-label={`Check out our ${name} page`}
             >
               <Icon />

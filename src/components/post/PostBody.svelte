@@ -1,11 +1,20 @@
 <script lang="ts">
   import Container from "../Container.svelte";
+  import SharePost from "./SharePost.svelte";
 
   export let content: string;
 </script>
 
-<Container class="post__body">
-  {@html content}
+<Container>
+  <div
+    class="flex flex-col-reverse lg:flex-row lg:max-w-[60rem] m-auto gap-20 p-20"
+  >
+    <SharePost />
+
+    <div class="post__body">
+      {@html content}
+    </div>
+  </div>
 </Container>
 
 <style lang="scss">
@@ -21,16 +30,16 @@
   }
 
   :global(.post__body > *) {
-    margin: auto;
+    /* margin: auto;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 0; */
 
-    @media screen and (min-width: 600px) {
+    /* @media screen and (min-width: 600px) {
       max-width: calc(100% - 40px);
     }
     @media screen and (min-width: 768px) {
       max-width: 51rem;
-    }
+    } */
   }
   :global(.post__body img),
   :global(.post__body video),
@@ -49,7 +58,7 @@
     color: inherit;
     white-space: pre-line;
     line-height: 24px;
-    margin-block: 16px;
+    /* margin-block: 16px; */
   }
   :global(.post__body h1),
   :global(.post__body h2),
