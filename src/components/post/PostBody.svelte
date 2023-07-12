@@ -6,12 +6,10 @@
 </script>
 
 <Container>
-  <div
-    class="flex flex-col-reverse lg:flex-row lg:max-w-[60rem] m-auto gap-20 p-20"
-  >
+  <div class="flex flex-col-reverse lg:flex-row m-auto gap-20 p-20">
     <SharePost />
 
-    <div class="post__body">
+    <div class="post__body lg:max-w-[60rem]">
       {@html content}
     </div>
   </div>
