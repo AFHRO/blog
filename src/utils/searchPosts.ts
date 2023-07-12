@@ -1,3 +1,4 @@
+import { fetchPostsFromContentful } from "./fetchPostsFromContentful";
 import fetchPostsFromWP from "./fetchPostsFromWP";
 
 
@@ -20,7 +21,7 @@ const searchPosts = async (searchQuery?: string, page: number = 1) => {
 
   // return posts;
   
-  const posts= await fetchPostsFromWP(page, 9, searchQuery);
+  const posts= await fetchPostsFromContentful(page, 9, searchQuery);
 
   return posts;
 };

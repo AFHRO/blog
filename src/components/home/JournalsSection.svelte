@@ -49,10 +49,10 @@
       <div class="my-10 flex justify-between items-center">
         <h2 class="text-[3rem] font-extrabold">Our Journals</h2>
         <a
-          href="/"
+          href="https://www.scienceopen.com/collection/4091206a-7c09-4c88-a6fb-579cd18ec7c9"
           aria-label="See all Journals on AHRO Publishing"
           class="text-primary-500 text-[2rem] hover:underline text-secondary"
-          >Explore jounrals</a
+          target="_blank">Explore jounrals</a
         >
       </div>
       <ul class="flex flex-col space-y-10">

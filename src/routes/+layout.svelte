@@ -7,6 +7,8 @@
 
   import GlobalHeader from "src/components/GlobalHeader.svelte";
   import GTagManagerScript from "src/components/GTagManagerScript.svelte";
+  import { page } from "$app/stores";
+  import routePaths from "src/utils/routePaths";
 
   let showMenu = false;
 
@@ -17,14 +19,18 @@
 
   $: hasScrolledDown =
     typeof scrollY === "number" ? Number(scrollY) > 80 : null;
+
+  $: isBlog = $page.url.pathname.includes(routePaths.blog);
 </script>
 
 <GTagManagerScript />
 
 <svelte:window bind:scrollY />
 
-<GlobalHeader {hasScrolledDown} {showMenu} {toggleMenu} />
-<MobileNav {showMenu} />
+{#if !isBlog}
+  <GlobalHeader {hasScrolledDown} {showMenu} {toggleMenu} />
+  <MobileNav {showMenu} />
+{/if}
 <slot class="main min-h-[60vh]" />
 <GlobalFooter />
 

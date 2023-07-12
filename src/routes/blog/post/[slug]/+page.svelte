@@ -21,6 +21,7 @@
 
 <section in:fade={{ delay: 500, duration: 500 }} out:fade class="min-h-[100vh]">
   <PostHero {post} />
+
   <PostBody content={data?.content} />
 </section>
 
