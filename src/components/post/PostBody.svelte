@@ -44,11 +44,11 @@
     white-space: pre-line;
     line-height: 24px;
   }
-  :global(.post__body h1),
+  /* :global(.post__body h1),
   :global(.post__body h2),
   :global(.post__body h3) {
     margin-top: 2.5rem;
-  }
+  } */
 
   /* :global(.post__body h1) {
     font-size: 3.2rem;
