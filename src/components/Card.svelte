@@ -35,7 +35,7 @@
     </div>
     <div>
       <h2>
-        <!-- {@html htmlCodeToSymbol(postTitle)} -->
+        {@html htmlCodeToSymbol(postTitle)}
       </h2>
       <div class="post-card__author">
         by {post.author}
