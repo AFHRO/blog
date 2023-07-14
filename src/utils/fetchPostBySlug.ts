@@ -51,7 +51,9 @@ const fetchPostBySlug = async (slug: string) => {
 					json
 				}
 				slug
-				categoryName: category
+				categoryName: category {
+					title
+				}
 				author {
 					name
 				 }
@@ -65,6 +67,8 @@ const fetchPostBySlug = async (slug: string) => {
 	post.featured_media = post.featuredImage?.url;
 
 	post.content = getRichTextString(post.content.json);
+
+	post.categoryName=post.category?.title||''
   
 	post= transformWordPressPost(post);	
 

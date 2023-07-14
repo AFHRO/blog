@@ -25,10 +25,11 @@ export const fetchPostsFromContentful = async (page=1, size=9, search?: string) 
                     originalPublishDate
                     content{
                         json
-
                     }
                     slug
-                    categoryName: category
+                    categoryName: category{
+                        title
+                    }
             }
     }
     }`
@@ -47,6 +48,8 @@ export const fetchPostsFromContentful = async (page=1, size=9, search?: string) 
         post.featured_media = post.featuredImage?.url;
 
         post.content = getRichTextString(post.content?.json||"");
+
+        post.categoryName= post.category?.title||'';
       
         post = transformWordPressPost(post);
 
