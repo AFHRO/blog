@@ -68,7 +68,10 @@ const fetchPostBySlug = async (slug: string) => {
 
 	post.content = getRichTextString(post.content.json);
 
-	post.categoryName=post.category?.title||''
+
+	post.categoryName=post.category?.title || '';
+
+	
   
 	post= transformWordPressPost(post);	
 

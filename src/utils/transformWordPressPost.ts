@@ -16,6 +16,7 @@ const transformWordPressPost = (post: any) => {
     categories,
     categoryName,
     id,
+    author
   } = post;
 
 
@@ -34,7 +35,7 @@ const transformWordPressPost = (post: any) => {
     featured_media: post.featured_media,
     // featured_media: post.featuredImage?.node.sourceUrl,
     //           categoryName: post.categories.nodes[0].name,
-    author: post?.author?.name||'Admin',
+    author:author?.name || author ||'Admin',
     excerpt:post.excerpt? convertUnicodeTOString(post.excerpt): undefined,
   };
 };
