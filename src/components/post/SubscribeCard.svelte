@@ -23,10 +23,10 @@
                 placeholder="yourmail@example.com"
                 class="flex-1 appearance-none rounded shadow px-5 bg-white focus:outline-none max-w-[30rem]"
               />
-              <Button
+              <button
                 type="submit"
-                class="text-white font-semibold bg-gray-800 "
-                >Get started</Button
+                class="btn text-white font-semibold bg-gray-800 p-4 rounded-lg hover:bg-gray-900 btn--md min-w-[15rem] inline-block"
+                >Get started</button
               >
             </div>
           </form>
