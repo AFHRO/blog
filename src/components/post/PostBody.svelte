@@ -9,8 +9,7 @@
 <Container>
   <div class="flex flex-col-reverse lg:flex-row m-auto gap-20 p-20">
     <SharePost />
-
-    <div class="post__body lg:max-w-[60rem]">
+    <div class="post__body lg:max-w-[60rem] text-[1.8rem]">
       {@html content}
       <SubscribeCard />
     </div>
@@ -29,18 +28,6 @@
     padding: 20px 0;
   }
 
-  :global(.post__body > *) {
-    /* margin: auto;
-    margin-left: 0;
-    margin-right: 0; */
-
-    /* @media screen and (min-width: 600px) {
-      max-width: calc(100% - 40px);
-    }
-    @media screen and (min-width: 768px) {
-      max-width: 51rem;
-    } */
-  }
   :global(.post__body img),
   :global(.post__body video),
   :global(.post__body figure),
@@ -54,20 +41,16 @@
   }
   :global(.post__body p),
   :global(.post__body li) {
-    font-size: 1.8rem;
-    color: inherit;
     white-space: pre-line;
     line-height: 24px;
-    /* margin-block: 16px; */
   }
-  :global(.post__body h1),
+  /* :global(.post__body h1),
   :global(.post__body h2),
   :global(.post__body h3) {
     margin-top: 2.5rem;
-    color: rgb(223, 243, 244);
-  }
+  } */
 
-  :global(.post__body h1) {
+  /* :global(.post__body h1) {
     font-size: 3.2rem;
   }
   :global(.post__body h2) {
@@ -76,7 +59,7 @@
 
   :global(.post__body h3) {
     font-size: 1.8rem;
-  }
+  } */
   :global(.post__body ol li) {
     list-style-type: circle;
   }
