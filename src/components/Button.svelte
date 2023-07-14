@@ -12,6 +12,7 @@
 </script>
 
 <button
+  class:text-[1.8em]={isPrimaryOrSecondary}
   class:text-white={isPrimaryOrSecondary && !color}
   class:p-5={isPrimaryOrSecondary && size === "lg"}
   class:p-4={isPrimaryOrSecondary && size === "md"}
