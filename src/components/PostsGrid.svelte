@@ -6,7 +6,6 @@
 
   export let posts: Post[] = [];
   export let loading = false;
-  export let currentPage: number | string = 1;
 </script>
 
 <title>Blog</title>
@@ -16,16 +15,11 @@
 {:else if !posts.length}
   <div />
 {:else}
-  <section class="min-h-[60vh]">
+  <section class="min-h-[60vh] my-20">
     {#each posts as post, index}
       <Card {post} {index} />
     {/each}
   </section>
-  {#if posts.length >= 9}
-    <div class="flex justify-center my-20">
-      <Pagination {currentPage} />
-    </div>
-  {/if}
 {/if}
 
 <style>
