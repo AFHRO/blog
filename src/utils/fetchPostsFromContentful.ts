@@ -57,8 +57,6 @@ export const fetchPostsFromContentful = async (page = 1, size = 9, search?: stri
 
         post.categoryName =  post.category?.title ?? '';
 
-        console.log(post.category);
-
         post = transformWordPressPost(post);
 
         return post;

@@ -10,7 +10,7 @@
 
 <title>Blog</title>
 
-{#if loading}
+<!-- {#if loading}
   <PostsLoading />
 {:else if !posts.length}
   <div />
@@ -20,7 +20,12 @@
       <Card {post} {index} />
     {/each}
   </section>
-{/if}
+{/if} -->
+<section class="min-h-[60vh] my-20">
+  {#each posts as post, index}
+    <Card {post} {index} />
+  {/each}
+</section>
 
 <style>
   section {
