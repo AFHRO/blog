@@ -4,14 +4,15 @@
   import SubscribeCard from "./SubscribeCard.svelte";
 
   export let content: string;
+  export let subscribed = false;
 </script>
 
 <Container>
   <div class="flex flex-col-reverse lg:flex-row m-auto gap-20 p-20">
     <SharePost />
-    <div class="post__body lg:max-w-[60rem] text-[1.8rem]">
+    <div class="post__body lg:max-w-[60rem] text-[1.8rem] text-line-[2]">
       {@html content}
-      <SubscribeCard />
+      <SubscribeCard {subscribed} />
     </div>
   </div>
 </Container>
@@ -42,7 +43,6 @@
   :global(.post__body p),
   :global(.post__body li) {
     white-space: pre-line;
-    line-height: 24px;
   }
   /* :global(.post__body h1),
   :global(.post__body h2),
