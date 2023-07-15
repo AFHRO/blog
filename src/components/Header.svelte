@@ -1,4 +1,5 @@
 <script lang="ts">
+  import routePaths from "src/utils/routePaths";
   import Container from "./Container.svelte";
   import Logo from "./Logo.svelte";
 
@@ -16,12 +17,12 @@
 
       <ul class="flex gap-[8rem] text-primary">
         <li>
-          <a href="/" aria-label="See all blog posts">All</a>
+          <a href={routePaths.blog} aria-label="See all blog posts">All</a>
         </li>
         {#each categories as category}
           <li>
             <a
-              href={`/blog/category/${category.slug}`}
+              href={`${routePaths.blog}/category/${category.slug}`}
               aria-label={`Go to the ${category.title} category`}
             >
               {category.title}
