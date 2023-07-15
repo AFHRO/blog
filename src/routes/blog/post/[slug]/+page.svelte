@@ -5,11 +5,11 @@
   import transformWordPressPost from "../../../../utils/transformWordPressPost";
   import PageHead from "src/components/PageHead.svelte";
   import type { Post } from "src/types/posts";
+  import type { ActionData } from "./$types";
 
   export let data: Post;
 
-  /** @type {import('./$types').ActionData} */
-  export let form: any;
+  export let form: ActionData;
 
   $: post = transformWordPressPost(data);
 
