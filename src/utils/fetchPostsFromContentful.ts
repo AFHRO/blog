@@ -33,7 +33,7 @@ export const fetchPostsFromContentful = async (page = 1, size = 9, search?: stri
                         json
                     }
                     slug
-                    categoryName: category{
+                    category {
                         title
                     }
             }
@@ -55,7 +55,9 @@ export const fetchPostsFromContentful = async (page = 1, size = 9, search?: stri
 
         post.content = getRichTextString(post.content?.json || "");
 
-        post.categoryName = post.category?.title || '';
+        post.categoryName =  post.category?.title ?? '';
+
+        console.log(post.category);
 
         post = transformWordPressPost(post);
 
