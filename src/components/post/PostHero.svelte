@@ -15,9 +15,9 @@
       <img src={post.featured_media} alt={post.title} loading="lazy" />
     </div>
     <div class="post-hero__content">
-      <!-- <p class="post-hero__content__category">
-        {categories[categoryId]?.name}
-      </p> -->
+      <p class="post-hero__content__category text-secondary">
+        {post.categoryName}
+      </p>
       <h1>
         {@html post.title}
       </h1>
