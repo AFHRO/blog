@@ -1,21 +1,33 @@
-<script>
+<script lang="ts">
   import Container from "./Container.svelte";
   import Logo from "./Logo.svelte";
 
   let scrollY = 0;
+
+  export let categories: Array<{ title: string; slug: string }> = [];
 </script>
 
 <header class={scrollY > 0 ? "scrolled" : undefined}>
-  <Container fillViewport class="header__container">
-    <nav>
+  <Container class="header__container">
+    <nav class="py-10">
       <a href="/" class="header__logo-wrapper" aria-label="Home">
         <Logo />
       </a>
 
-      <ul>
+      <ul class="flex gap-[8rem] text-primary">
         <li>
-          <a href="/" aria-label="Go to the Blog">Blog</a>
+          <a href="/" aria-label="See all blog posts">All</a>
         </li>
+        {#each categories as category}
+          <li>
+            <a
+              href={`/blog/category/${category.slug}`}
+              aria-label={`Go to the ${category.title} category`}
+            >
+              {category.title}
+            </a>
+          </li>
+        {/each}
       </ul>
     </nav>
   </Container>
@@ -69,7 +81,6 @@
 
   ul {
     display: none;
-    gap: 20px;
     @media (min-width: 768px) {
       display: flex;
     }
@@ -78,13 +89,11 @@
       list-style: none;
 
       a {
-        color: var(--text-black);
         font-size: 18px;
         text-decoration: none;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          color: var(--text-black);
           text-decoration: underline;
         }
       }
