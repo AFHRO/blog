@@ -15,7 +15,6 @@
       posts = await fetchPosts();
       loading = false;
     } catch (error) {
-      console.log(error);
       loading = false;
     }
   });

@@ -14,8 +14,6 @@
   $: post = transformWordPressPost(data);
 
   let { subscribed } = form || {};
-
-  console.log({ subscribed });
 </script>
 
 <PageHead
