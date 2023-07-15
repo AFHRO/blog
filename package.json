@@ -36,7 +36,6 @@
     "@cloudinary/url-gen": "^1.10.1",
     "@contentful/rich-text-html-renderer": "^16.1.0",
     "@fontsource-variable/mulish": "^5.0.4",
-    "@getbrevo/brevo": "^1.0.1",
     "@sanity/client": "^6.1.5",
     "contentful": "^10.3.3",
     "graphql": "^16.7.1",
