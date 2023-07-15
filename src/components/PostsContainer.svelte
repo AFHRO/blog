@@ -8,9 +8,12 @@
 
   export let currentPage: number | string = 1;
 
+  export let category: string | undefined;
+
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { onMount } from "svelte";
+  import Pagination from "./Pagination.svelte";
 
   let searchTextValue: any = "";
 
@@ -21,7 +24,7 @@
   });
 </script>
 
-<Container>
+<Container class="my-20">
   <form
     on:submit|preventDefault={(e) => {
       e.preventDefault();
@@ -40,7 +43,10 @@
       {/if}
     </h1>
   </div>
-  <PostsGrid {posts} {loading} {currentPage} />
+  <PostsGrid {posts} {loading} />
+  {#if posts.length >= 9}
+    <Pagination {currentPage} {category} />
+  {/if}
 </Container>
 
 <style>

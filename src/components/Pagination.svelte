@@ -1,17 +1,23 @@
 <script lang="ts">
   import { afterNavigate } from "$app/navigation";
   import { page } from "$app/stores";
+  import routePaths from "src/utils/routePaths";
 
   import ChevronLeft from "./icons/ChevronLeft.svelte";
   import ChevronRight from "./icons/ChevronRight.svelte";
   let currentPageVal: string | number | null = "1";
 
   export let currentPage: number | string = 1;
+
+  export let category: string | undefined;
+
   const searchText = $page.url.searchParams.get("search");
   const getUrl = (currentPage: number) => {
+    if (category)
+      return `${routePaths.blog}/category/${category}?page=${currentPage}`;
     if (searchText)
-      return `/blog/search?search=${searchText}&page=${currentPage}`;
-    return `/blog/page/${currentPage}`;
+      return `${routePaths.blog}/search?search=${searchText}&page=${currentPage}`;
+    return `${routePaths.blog}/page/${currentPage}`;
   };
 
   $: currentPageVal = searchText
@@ -34,7 +40,7 @@
   }
 </script>
 
-<div>
+<div class="flex justify-center my-20">
   {#if Number(currentPageVal) > 1}
     <a
       href={getUrl(Number(currentPageVal) - 1)}

@@ -51,7 +51,7 @@ const fetchPostBySlug = async (slug: string) => {
 					json
 				}
 				slug
-				categoryName: category {
+			 	category {
 					title
 				}
 				author {
@@ -69,7 +69,7 @@ const fetchPostBySlug = async (slug: string) => {
 	post.content = getRichTextString(post.content.json);
 
 
-	post.categoryName=post.category?.title || '';
+	post.categoryName=post.category?.title ?? '';
 
 	
   
