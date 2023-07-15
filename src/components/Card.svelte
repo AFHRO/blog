@@ -17,10 +17,6 @@
         ? `${post.categoryName.substring(0, 15)}...`
         : post.categoryName
       : undefined;
-
-  // onMount(async () => {
-  //   console.log(getRichTextString(post.content.json));
-  // });
 </script>
 
 <a

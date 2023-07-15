@@ -8,7 +8,12 @@
 
   export let data: Post;
 
+  /** @type {import('./$types').ActionData} */
+  export let form: any;
+
   $: post = transformWordPressPost(data);
+
+  let { subscribed } = form || {};
 </script>
 
 <PageHead
@@ -22,7 +27,7 @@
 <section in:fade={{ delay: 500, duration: 500 }} out:fade class="min-h-[100vh]">
   <PostHero {post} />
 
-  <PostBody content={data?.content} />
+  <PostBody content={data?.content} {subscribed} />
 </section>
 
 <style lang="scss">
