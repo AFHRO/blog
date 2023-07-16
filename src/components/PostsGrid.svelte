@@ -5,22 +5,10 @@
   import PostsLoading from "./PostsLoading.svelte";
 
   export let posts: Post[] = [];
-  export let loading = false;
 </script>
 
 <title>Blog</title>
 
-<!-- {#if loading}
-  <PostsLoading />
-{:else if !posts.length}
-  <div />
-{:else}
-  <section class="min-h-[60vh] my-20">
-    {#each posts as post, index}
-      <Card {post} {index} />
-    {/each}
-  </section>
-{/if} -->
 <section class="min-h-[60vh] my-20">
   {#each posts as post, index}
     <Card {post} {index} />
