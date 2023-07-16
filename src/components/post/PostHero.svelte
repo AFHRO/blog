@@ -18,7 +18,7 @@
       <p class="post-hero__content__category text-secondary">
         {post.categoryName}
       </p>
-      <h1>
+      <h1 class="mb-20">
         {@html post.title}
       </h1>
       <p class="post-hero__content__author">
@@ -97,12 +97,6 @@
         color: var(--text-grey);
         margin-bottom: 8px;
       } */
-
-      h1 {
-        font-size: 3.2rem;
-        margin-top: 1.6rem;
-        margin-bottom: 2.4rem;
-      }
 
       &__author {
         margin-bottom: 20px;

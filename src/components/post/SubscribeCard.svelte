@@ -4,7 +4,7 @@
 
 <div class="mt-24 shadow-md rounded-lg w-full">
   <div
-    class="items-center justify-between py-10 px-5 bg-secondaryLight shadow-2xl rounded-lg mx-auto text-center"
+    class="items-center justify-between py-20 px-10 bg-secondaryLight shadow-2xl rounded-lg mx-auto text-center"
   >
     <div class="text-center">
       <h2 class="text-gray-800 font-bold w-full text-6xl mb-5">

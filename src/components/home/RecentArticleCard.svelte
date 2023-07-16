@@ -6,24 +6,9 @@
   import routePaths from "src/utils/routePaths";
 
   export let post: Post;
-  let categoryName = "";
 
   const postTitle =
     post.title.length > 90 ? `${post.title.substring(0, 50)}...` : post.title;
-
-  onMount(async () => {
-    const categoryId = post.categories[0];
-    let res = await fetch(`${PUBLIC_BLOG_URL}/categories/${categoryId}`);
-    const category = await res.json();
-
-    categoryName = category.name;
-
-    // break at nth character
-    categoryName =
-      categoryName?.length > 15
-        ? `${categoryName.substring(0, 15)}...`
-        : categoryName;
-  });
 </script>
 
 <a
