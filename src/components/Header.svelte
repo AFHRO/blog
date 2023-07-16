@@ -15,7 +15,7 @@
         <Logo />
       </a>
 
-      <ul class="flex gap-[8rem] text-primary">
+      <ul class="lg:flex gap-[5vw] text-primary hidden">
         <li>
           <a href={routePaths.blog} aria-label="See all blog posts">All</a>
         </li>

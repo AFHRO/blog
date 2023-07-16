@@ -1,33 +1,13 @@
 <script lang="ts">
-  import type { Post } from "src/types/posts";
-  import { afterNavigate } from "$app/navigation";
-  import { page } from "$app/stores";
-  import searchPosts from "../../../utils/searchPosts";
   import PostsContainer from "../../../components/PostsContainer.svelte";
-  let pageNumber: any = 1;
 
-  // Access and use the query parameters
+  export let data: any;
 
-  let searchText: any = "";
+  $: currentPage = data?.page ?? 1;
 
-  let posts: Post[] = [];
-  let loading = false;
+  $: totalCount = data?.total ?? 1;
 
-  $: searchText = $page.url.searchParams.get("search");
-
-  $: pageNumber = $page.url.searchParams.get("page") || 1;
-
-  afterNavigate(async () => {
-    posts = [];
-    loading = true;
-    try {
-      posts = await searchPosts(searchText, pageNumber);
-      loading = false;
-    } catch (error) {
-      console.log(error);
-      loading = false;
-    }
-  });
+  $: posts = data?.posts ?? [];
 </script>
 
-<PostsContainer {posts} {loading} currentPage={pageNumber} />
+<PostsContainer {posts} {currentPage} {totalCount} />

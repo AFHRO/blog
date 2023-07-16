@@ -5,19 +5,10 @@
   import fetchPosts from "../../utils/fetchPosts";
   import PageHead from "src/components/PageHead.svelte";
 
-  let posts: Post[] = [];
-  let loading = false;
+  export let data: any;
 
-  onMount(async () => {
-    posts = [];
-    loading = true;
-    try {
-      posts = await fetchPosts();
-      loading = false;
-    } catch (error) {
-      loading = false;
-    }
-  });
+  $: posts = data?.posts ?? [];
+  $: totalCount = data?.total;
 </script>
 
 <PageHead
@@ -26,4 +17,4 @@
     description: "Read AHRO's latest articles on global health.",
   }}
 />
-<PostsContainer {posts} {loading} />
+<PostsContainer {posts} category={undefined} {totalCount} />
