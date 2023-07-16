@@ -4,7 +4,7 @@
 
 <div class="mt-24 shadow-md rounded-lg w-full">
   <div
-    class="items-center justify-between py-10 px-5 bg-secondaryLight shadow-2xl rounded-lg mx-auto text-center"
+    class="items-center justify-between py-20 px-10 bg-secondaryLight shadow-2xl rounded-lg mx-auto text-center"
   >
     <div class="text-center">
       <h2 class="text-gray-800 font-bold w-full text-6xl mb-5">
@@ -21,11 +21,11 @@
               type="email"
               placeholder="yourmail@example.com"
               name="email"
-              class="flex-1 appearance-none rounded shadow px-5 bg-white focus:outline-none max-w-[30rem]"
+              class="flex-1 appearance-none rounded shadow px-5 bg-white focus:outline-none max-w-[30rem] text-2xl"
             />
             <button
               type="submit"
-              class="btn text-white font-semibold bg-gray-800 p-4 rounded-lg hover:bg-gray-900 btn--md min-w-[15rem] inline-block disabled:bg-gray-600 disabled:cursor-not-allowed"
+              class="btn text-white font-semibold bg-gray-800 p-4 rounded-lg hover:bg-gray-900 btn--md min-w-[15rem] inline-block disabled:bg-gray-600 disabled:cursor-not-allowed text-2xl"
               disabled={subscribed}
               >{subscribed ? "Subscribed!" : "Subscribe"}</button
             >

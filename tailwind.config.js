@@ -31,9 +31,8 @@ export default {
       },
       fontSize: {
         base: "1rem",
-        lg: "1.125rem",
-        "4.5xl": "2.5rem",
       },
+      
     },
   },
   plugins: [],
