@@ -6,8 +6,15 @@
   $: posts = data?.posts ?? [];
 
   $: page = data?.page ?? 1;
+
+  $: totalCount = data?.total;
 </script>
 
 {#key posts}
-  <PostsContainer {posts} currentPage={page} category={undefined} />
+  <PostsContainer
+    {posts}
+    currentPage={page}
+    category={undefined}
+    {totalCount}
+  />
 {/key}

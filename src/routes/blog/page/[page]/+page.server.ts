@@ -4,8 +4,10 @@ export async function load({params}) {
 
 	const {page} = params
 
-	const posts=await fetchPostsFromContentful(+page,9,);
+	const postsData=await fetchPostsFromContentful(+page,9,);
 
-	return {posts,page};
+	const {posts,total}=postsData;
+
+	return {posts,total,page};
 	
 }

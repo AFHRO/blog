@@ -37,6 +37,7 @@ export const fetchPostsFromContentful = async (page = 1, size = 9, search?: stri
                         title
                     }
             }
+            total
     }
     }`
 
@@ -62,9 +63,11 @@ export const fetchPostsFromContentful = async (page = 1, size = 9, search?: stri
         return post;
     });
 
+    const total = response.data.blogPostCollection.total;
 
 
 
-    return posts;
+
+    return {posts, total};
 
 }

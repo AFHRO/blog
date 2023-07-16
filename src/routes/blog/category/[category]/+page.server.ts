@@ -8,13 +8,15 @@ export async function load({params,url}) {
 
 	const page=searchParams.get('page')||1;
 
-	const posts=await fetchPostsFromContentful(+page,9,undefined,category);
+	const postsData=await fetchPostsFromContentful(+page,9,undefined,category);
+
+	const {posts,total}=postsData;
 
 
 
 
 
 
-	return {posts,page,category};
+	return {posts, total, page,category};
 	
 }

@@ -10,11 +10,9 @@
   const { category } = data || {};
 
   $: posts = data?.posts || [];
-
-  // let posts: Post[] = [];
-  let loading = false;
+  $: totalCount = data?.total;
 </script>
 
 {#key posts}
-  <PostsContainer {posts} {loading} currentPage={data.page} {category} />
+  <PostsContainer {posts} {totalCount} currentPage={data.page} {category} />
 {/key}

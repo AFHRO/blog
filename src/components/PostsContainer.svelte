@@ -4,24 +4,21 @@
   import Container from "./Container.svelte";
 
   export let posts: Post[] = [];
-  export let loading = false;
 
   export let currentPage: number | string = 1;
 
-  export let category: string | undefined;
+  export let category: string | undefined = undefined;
+
+  export let totalCount: number = 1;
 
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
-  import { onMount } from "svelte";
   import Pagination from "./Pagination.svelte";
 
   let searchTextValue: any = "";
 
   $: searchTextInUrl = $page.url.searchParams.get("search");
-
-  onMount(() => {
-    searchTextValue = searchTextInUrl;
-  });
+  console.log(currentPage);
 </script>
 
 <Container class="my-20">
@@ -43,9 +40,9 @@
       {/if}
     </h1>
   </div>
-  <PostsGrid {posts} {loading} />
-  {#if posts.length >= 9}
-    <Pagination {currentPage} {category} />
+  <PostsGrid {posts} />
+  {#if posts.length >= 9 || +currentPage > 1}
+    <Pagination {currentPage} {category} {totalCount} />
   {/if}
 </Container>
 

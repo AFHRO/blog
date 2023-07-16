@@ -9,12 +9,6 @@
 </script>
 
 <Header {categories} />
-<main class="main-wrapper min-h-[70vh]" in:fade={{ delay: 0 }}>
+<main class="main-wrapper min-h-[70vh] pt-20" in:fade={{ delay: 0 }}>
   <slot class="main" />
 </main>
-
-<style lang="scss">
-  .main-wrapper {
-    padding-top: 100px;
-  }
-</style>
