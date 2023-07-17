@@ -1,6 +1,5 @@
 <script lang="ts">
   import Container from "../Container.svelte";
-  import categoriesJson from "../../utils/categories.json";
   import WaveSvg from "./WaveSvg.svelte";
   import Space from "../Space.svelte";
   import CalendarIcon from "../icons/CalendarIcon.svelte";
