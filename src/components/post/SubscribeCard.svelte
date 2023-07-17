@@ -16,12 +16,14 @@
       </div>
       <div class="w-full text-center mt-10">
         <form method="POST">
-          <div class="mx-auto p-1 pr-0 flex gap-2 justify-center">
+          <div
+            class="mx-auto p-1 pr-0 flex flex-col lg:flex-row gap-5 justify-center"
+          >
             <input
               type="email"
               placeholder="yourmail@example.com"
               name="email"
-              class="flex-1 appearance-none rounded shadow px-5 bg-white focus:outline-none max-w-[30rem] text-2xl"
+              class="flex-1 appearance-none rounded shadow px-5 py-5 bg-white focus:outline-none lg:max-w-[30rem] text-2xl"
             />
             <button
               type="submit"
