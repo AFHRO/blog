@@ -109,7 +109,6 @@
       &__length {
         font-size: 1.8rem;
         color: var(--text-grey);
-        margin-bottom: 8px;
 
         @media screen and (min-width: 768px) {
           margin-bottom: 0;
