@@ -1,8 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import PostsContainer from "../../components/PostsContainer.svelte";
-  import type { Post } from "../../types/posts";
-  import fetchPosts from "../../utils/fetchPosts";
   import PageHead from "src/components/PageHead.svelte";
 
   export let data: any;

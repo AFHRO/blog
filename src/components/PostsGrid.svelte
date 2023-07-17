@@ -1,8 +1,6 @@
 <script lang="ts">
   import type { Post } from "../types/posts";
   import Card from "./Card.svelte";
-  import Pagination from "./Pagination.svelte";
-  import PostsLoading from "./PostsLoading.svelte";
 
   export let posts: Post[] = [];
 </script>
