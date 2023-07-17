@@ -39,5 +39,4 @@
   <meta name="twitter:description" content={description} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <link rel="icon" href="/favicon.ico" />
 </svelte:head>
