@@ -74,12 +74,6 @@
     width: 100%;
   }
 
-  @media (max-width: 768px) {
-    header {
-      height: 60px;
-    }
-  }
-
   ul {
     display: none;
     @media (min-width: 768px) {
