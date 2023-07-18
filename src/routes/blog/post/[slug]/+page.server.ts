@@ -30,10 +30,10 @@ export const actions:Actions = {
                 },
                 body: JSON.stringify({
                     email,
-                    listIds: [PUBLIC_BREVO_BLOG_LIST_ID]
+                    listIds: [Number(PUBLIC_BREVO_BLOG_LIST_ID)]
                 })
             });
-
+console.log(res);
 
             if ([200,201].includes(res.status)) {
                 return {
