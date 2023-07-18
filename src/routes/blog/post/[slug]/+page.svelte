@@ -19,7 +19,8 @@
 <PageHead
   metaContent={{
     title: post?.title ? `${post?.title} | AHRO Blog` : "AHRO Blog",
-    description: post?.excerpt,
+    description:
+      post?.excerpt || "Read this article on AHRO Blog: " + post?.title,
     image: post?.featured_media,
   }}
 />
