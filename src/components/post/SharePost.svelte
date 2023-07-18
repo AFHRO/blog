@@ -4,7 +4,10 @@
   import LinkedinIcon from "../icons/LinkedinIcon.svelte";
   import TwitterIcon from "../icons/TwitterIcon.svelte";
 
-  const pageURL = $page.url.origin + $page.url.pathname + "/";
+  const pageURL = ($page.url.origin + $page.url.pathname).replace(
+    "https://",
+    "https//www."
+  );
 
   let encodedUrl = encodeURIComponent(pageURL);
 
