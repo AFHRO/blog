@@ -1,7 +1,17 @@
 import { PUBLIC_BREVO_API_KEY, PUBLIC_BREVO_BLOG_LIST_ID } from '$env/static/public';
-import type { Actions } from '@sveltejs/kit';
+import { error, type Actions } from '@sveltejs/kit';
+import fetchPostBySlug from 'src/utils/fetchPostBySlug.js';
 
 
+export const load = async ({ params }) => {
+    const post = await fetchPostBySlug(params.slug);
+  
+    if(!post) {
+      throw error(404, 'Post not found');
+    }
+  
+    return post;
+  };
 
 export const actions:Actions = {
     default: async ({ request }) => {
