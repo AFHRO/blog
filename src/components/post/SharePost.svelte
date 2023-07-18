@@ -6,11 +6,6 @@
 
   let pageURL = $page.url.origin + $page.url.pathname + "/";
 
-  // add www if not present
-  if (pageURL.indexOf("www") == -1) {
-    pageURL = pageURL.replace("https://", "https://www.");
-  }
-
   let encodedUrl = encodeURIComponent(pageURL);
 
   const buttons = [
