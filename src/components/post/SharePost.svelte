@@ -4,10 +4,9 @@
   import LinkedinIcon from "../icons/LinkedinIcon.svelte";
   import TwitterIcon from "../icons/TwitterIcon.svelte";
 
-  const pageURL = ($page.url.origin + $page.url.pathname).replace(
-    "https://",
-    "https//www."
-  );
+  const pageURL =
+    ($page.url.origin + $page.url.pathname).replace("https://", "https//www.") +
+    "/";
 
   let encodedUrl = encodeURIComponent(pageURL);
 
@@ -36,7 +35,11 @@
   <p class="text-3xl lg:w-[15rem]">Share this post</p>
   <div class="mt-5 flex gap-10 justify-center lg:justify-start h-[20rem]">
     {#each buttons as { Icon, url, name }}
-      <a href={url} aria-label={`Share this article on ${name}`}>
+      <a
+        href={url}
+        aria-label={`Share this article on ${name}`}
+        target="_blank"
+      >
         <div class="block w-10">
           <Icon />
         </div>
