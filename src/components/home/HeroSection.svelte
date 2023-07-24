@@ -5,6 +5,8 @@
   import HeroVideo from "./HeroVideo.svelte";
   import { PUBLIC_SITE_NAME } from "$env/static/public";
 
+  const isPublishingSite = PUBLIC_SITE_NAME === "AHRO Scientific Publishing";
+
   onMount(() => {
     const video: any = document.getElementById("background-video");
     if (video) {
@@ -42,13 +44,20 @@
       <div
         class="relative z-40 xs:w-6-cols md:w-8-cols lg:ml-2-cols lg:w-8-cols lg:max-w-[100rem]"
       >
-        <h1 class="text-white font-bold">
-          Championing the <span class="text-secondary">One Health</span> agenda
-        </h1>
+        {#if isPublishingSite}
+          <h1 class="text-white font-bold">
+            Empowering Scientific Discoveries
+          </h1>
+        {:else}
+          <h1 class="text-white font-bold">
+            Championing the <span class="text-secondary">One Health</span> agenda
+          </h1>
+        {/if}
+
         <p class="text-white mt-5">
-          We are a global health research institute that aims to improve the
-          health of people and their environments, through high-quality research
-          and capacity building.
+          {isPublishingSite
+            ? "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis tenetur ratione quasi, delectus quibusdam maxime minus. Dolorem, odit! Quia tempore debitis necessitatibus officia voluptate, architecto dolorem laborum maxime cumque fuga!"
+            : "We are a global health research institute that aims to improve the health of people and their environments, through high-quality research and capacity building."}
         </p>
         <div class="mt-10">
           <a href="/" aria-label={`Learn more about ${PUBLIC_SITE_NAME}`}

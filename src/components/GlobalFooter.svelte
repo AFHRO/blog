@@ -3,6 +3,7 @@
   import Space from "./Space.svelte";
   import footerLinks, { footerSocialLinks } from "src/utils/footerLinks";
   import logoIcon from "$lib/logo-icon.png";
+  import { PUBLIC_SITE_NAME } from "$env/static/public";
 </script>
 
 <footer class="bg-primary text-white py-20 text-[1.5rem]">
@@ -13,7 +14,7 @@
       <div class="flex flex-col gap-y-10 align-middle">
         <div class="space-y-4 max-w-[18rem]">
           <img src={logoIcon} width="100" alt="AHRO logo" />
-          <h3 class="text-[1.2rem]">AFRICA HEALTH RESEARCH ORGANISATION</h3>
+          <h3 class="text-[1.2rem] uppercase">{PUBLIC_SITE_NAME}</h3>
         </div>
 
         <div class="flex space-x-10 text-xl">
