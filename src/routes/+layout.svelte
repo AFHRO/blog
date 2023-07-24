@@ -10,6 +10,8 @@
   import { page } from "$app/stores";
   import routePaths from "src/utils/routePaths";
 
+  import Notification from "src/components/Notification.svelte";
+
   let showMenu = false;
 
   function toggleMenu() {
@@ -26,6 +28,8 @@
 <GTagManagerScript />
 
 <svelte:window bind:scrollY />
+
+<Notification />
 
 {#if !isBlog}
   <GlobalHeader {hasScrolledDown} {showMenu} {toggleMenu} />

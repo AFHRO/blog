@@ -33,7 +33,6 @@ export const actions:Actions = {
                     listIds: [Number(PUBLIC_BREVO_BLOG_LIST_ID)]
                 })
             });
-console.log(res);
 
             if ([200,201].includes(res.status)) {
                 return {
@@ -42,7 +41,7 @@ console.log(res);
             }
         } catch (e) {
             return {
-                subsribed: false
+                subsribed: false,
             }
 
         }
