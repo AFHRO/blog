@@ -4,7 +4,6 @@
   import SubscribeCard from "./SubscribeCard.svelte";
 
   export let content: string;
-  export let subscribed = false;
 </script>
 
 <Container>
@@ -14,7 +13,7 @@
       class="post__body flex flex-col w-full m-auto lg:max-w-[60rem] text-line-[2] text-gray-800 align-middle py-20"
     >
       {@html content}
-      <SubscribeCard {subscribed} />
+      <SubscribeCard />
     </div>
   </div>
 </Container>

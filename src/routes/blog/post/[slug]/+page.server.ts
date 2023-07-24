@@ -41,7 +41,7 @@ export const actions:Actions = {
             }
         } catch (e) {
             return {
-                subsribed: false
+                subsribed: false,
             }
 
         }
