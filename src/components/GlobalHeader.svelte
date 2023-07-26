@@ -44,9 +44,9 @@
             <img src={!isTransparent ? LogoIconPrimary : LogoIcon} alt="logo" />
           </span>
           <div
-            class="ml-2 text-[1.4rem] md:text-[1.7rem] font-bold w-[20rem] md:w-[25rem]"
+            class="ml-2 text-[1.4rem] md:text-[1.7rem] font-bold w-[20rem] md:w-[25rem] uppercase"
           >
-            AFRICA HEALTH RESEARCH ORGANISATION
+            {PUBLIC_SITE_NAME}
           </div>
         </a>
 

@@ -12,7 +12,7 @@
       <div />
     {:else}
       <div class="mb-10 flex justify-between items-center">
-        <h2 class="text-[3rem] font-extrabold">Latest from us</h2>
+        <h2 class="text-[3rem] font-extrabold">Latest Articles</h2>
         <a
           href="/blog"
           aria-label="See all articles on the blog"
