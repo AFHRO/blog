@@ -11,6 +11,7 @@
   import routePaths from "src/utils/routePaths";
 
   import Notification from "src/components/Notification.svelte";
+  import PageHead from "src/components/PageHead.svelte";
 
   let showMenu = false;
 
@@ -24,6 +25,8 @@
 
   $: isBlog = $page.url.pathname.includes(routePaths.blog);
 </script>
+
+<PageHead />
 
 <GTagManagerScript />
 
