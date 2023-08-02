@@ -2,6 +2,7 @@ import routePaths from "./routePaths";
 
 export default [
     { text: "About", href: routePaths.about },
-    { text: "Services", href: "/" },
-    { text: "Blog", href: routePaths.blog },
+    { text: "Authors", href: "/" },
+    { text: "Libarians", href: '/' },
+    { text: 'Marketers', href:'/'}
   ];
