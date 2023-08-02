@@ -56,7 +56,7 @@
 
         <p class="text-white mt-5">
           {isPublishingSite
-            ? "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis tenetur ratione quasi, delectus quibusdam maxime minus. Dolorem, odit! Quia tempore debitis necessitatibus officia voluptate, architecto dolorem laborum maxime cumque fuga!"
+            ? " Home to Africa Health Research Organization and AHRO Care Agency, we champion global health. With 25+ indexed journals, our double-blind peer-review process ensures excellence."
             : "We are a global health research institute that aims to improve the health of people and their environments, through high-quality research and capacity building."}
         </p>
         <div class="mt-10">
