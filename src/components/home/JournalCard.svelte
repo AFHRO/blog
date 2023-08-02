@@ -16,7 +16,7 @@
       {firstNWords(journal.description, 20)}
     </p>
   </div>
-  <p class="font-bold text-[1.5rem]">
+  <!-- <p class="font-bold text-[1.5rem]">
     {journal.date}
-  </p>
+  </p> -->
 </div>
