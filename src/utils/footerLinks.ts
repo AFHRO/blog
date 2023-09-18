@@ -29,16 +29,16 @@ export default [
     title: "Services",
     links: [
       {
-        title: "Scientific Publishing",
+        title: "Publishing",
         url: "/",
       },
       {
-        title: "Conferences",
-        url: "/",
+        title: "AHRO Institute",
+        url: "https://afhro.org",
       },
       {
-        title: "Clinical Research",
-        url: "/",
+        title: "AHRO Conferences",
+        url: "https://ahroconferences.com",
       },
     ],
   },

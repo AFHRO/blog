@@ -8,5 +8,5 @@
 
 <PageMain>
   <HeroSection />
-  <StaffSection staffList={data?.items || []} />
+  <!-- <StaffSection staffList={data?.items || []} /> -->
 </PageMain>
